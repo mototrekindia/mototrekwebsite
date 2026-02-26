@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotoTrek - Website Prototype</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest-green: #1a3d2e;
+      --burnt-orange: #c45d2a;
+      --off-white: #f8f6f3;
+      --charcoal: #2d2d2d;
+      --light-green: #2a5442;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--off-white);
+      color: var(--charcoal);
+    }
+    
+    .font-display {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    
+    .bg-forest { background-color: var(--forest-green); }
+    .bg-orange { background-color: var(--burnt-orange); }
+    .bg-offwhite { background-color: var(--off-white); }
+    .text-forest { color: var(--forest-green); }
+    .text-orange { color: var(--burnt-orange); }
+    .text-charcoal { color: var(--charcoal); }
+    
+    .btn-primary {
+      background: var(--burnt-orange);
+      color: white;
+      padding: 14px 32px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 14px;
+    }
+    
+    .btn-primary:hover {
+      background: #a84d22;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 14px 32px;
+      font-weight: 600;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 14px;
+    }
+    
+    .btn-secondary:hover {
+      background: white;
+      color: var(--forest-green);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(26, 61, 46, 0.9) 0%, rgba(26, 61, 46, 0.7) 50%, rgba(196, 93, 42, 0.3) 100%);
+    }
+    
+    .product-card {
+      background: white;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(26, 61, 46, 0.15);
+    }
+    
+    .category-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .category-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26, 61, 46, 0.95), transparent 60%);
+    }
+    
+    .category-card:hover .category-img {
+      transform: scale(1.1);
+    }
+    
+    .category-img {
+      transition: transform 0.5s ease;
+    }
+    
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--burnt-orange);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .slide-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    
+    .slide-dot.active {
+      background: var(--burnt-orange);
+      transform: scale(1.2);
+    }
+    
+    .slide-dot:hover {
+      background: rgba(255,255,255,0.6);
+    }
+    
+    .trek-card {
+      background: white;
+      border-left: 4px solid var(--burnt-orange);
+      transition: all 0.3s ease;
+    }
+    
+    .trek-card:hover {
+      transform: translateX(8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--forest-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .scroll-container {
+      overflow-y: auto;
+      flex: 1;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+
+    <div class="scroll-container"><!-- Navigation -->
+     <nav class="bg-forest fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+       <div class="flex items-center gap-3">
+        <svg class="w-10 h-10 text-orange" viewbox="0 0 40 40" fill="none"><path d="M20 5L35 35H5L20 5Z" stroke="currentColor" stroke-width="2.5" fill="none" /> <circle cx="20" cy="22" r="6" stroke="currentColor" stroke-width="2" /> <path d="M17 22L19 24L23 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg><span id="brand-name" class="font-display text-2xl text-white tracking-wider">MOTOTREK</span>
+       </div>
+       <a href="index.html" class="nav-link text-white text-sm font-medium tracking-wide">HOME</a> 
+       <a href="shop.html" class="nav-link text-orange text-sm font-medium tracking-wide">SHOP</a> 
+       <a href="treks.html" class="nav-link text-white text-sm font-medium tracking-wide">TREKS</a> 
+       <a href="about.html" class="nav-link text-white text-sm font-medium tracking-wide">ABOUT</a> 
+       <a href="contact.html" class="nav-link text-white text-sm font-medium tracking-wide">CONTACT</a>
+       <div class="flex items-center gap-4"><button class="text-white">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+         </svg></button> <button class="text-white relative">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+         </svg><span class="absolute -top-2 -right-2 bg-orange text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span> </button>
+       </div>
+      </div>
+     
+     </nav><!-- Product Banner -->
+     <section class="relative pt-16" style="height: 35vh; min-height: 280px;">
+      <div class="absolute inset-0 bg-forest">
+       <div class="absolute inset-0" style="background: linear-gradient(90deg, #1a3d2e 0%, #2a5442 50%, rgba(196, 93, 42, 0.3) 100%);"></div>
+       <svg class="absolute right-10 top-1/2 transform -translate-y-1/2 w-48 h-48 opacity-10" viewbox="0 0 100 100"><path d="M30 25 L70 25 L75 45 L80 80 L20 80 L25 45 Z" stroke="white" stroke-width="2" fill="none" />
+       </svg>
+      </div>
+      <div class="relative z-10 h-full flex items-center">
+       <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="flex items-center gap-2 text-gray-300 text-sm mb-4">
+        <a href="index.html" class="hover:text-orange">Home</a>
+        <span>/</span>
+        <a href="shop.html" class="hover:text-orange">Shop</a>
+        <span>/</span>
+        <span class="text-orange">Scala Riding Jacket</span>
+      </div>
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl text-white">RIDE FAST. STAY PROTECTED.</h1>
+       </div>
+      </div>
+     </section><!-- Product Details -->
+     <section class="py-12 bg-offwhite">
+      <div class="max-w-7xl mx-auto px-6">
+       <div class="grid lg:grid-cols-2 gap-12"><!-- Image Gallery -->
+        <div>
+         <div class="bg-white rounded-lg p-8 mb-4 aspect-square flex items-center justify-center">
+          <svg class="w-3/4 h-3/4 opacity-60" viewbox="0 0 200 200"><path d="M60 50 L140 50 L150 90 L160 160 L40 160 L50 90 Z" stroke="#1a3d2e" stroke-width="3" fill="none" /> <line x1="60" y1="50" x2="60" y2="30" stroke="#1a3d2e" stroke-width="3" /> <line x1="140" y1="50" x2="140" y2="30" stroke="#1a3d2e" stroke-width="3" /> <path d="M70 100 L90 100 L90 130 L70 130" stroke="#1a3d2e" stroke-width="2" fill="none" /> <path d="M110 100 L130 100 L130 130 L110 130" stroke="#1a3d2e" stroke-width="2" fill="none" /> <line x1="75" y1="70" x2="125" y2="70" stroke="#c45d2a" stroke-width="2" /> <circle cx="100" cy="145" r="8" stroke="#c45d2a" stroke-width="2" fill="none" />
+          </svg>
+         </div>
+         <div class="grid grid-cols-4 gap-3">
+          <div class="bg-white rounded p-4 border-2 border-orange cursor-pointer">
+           <svg class="w-full opacity-50" viewbox="0 0 50 50"><path d="M15 12 L35 12 L38 22 L40 40 L10 40 L12 22 Z" stroke="#1a3d2e" stroke-width="1" fill="none" />
+           </svg>
+          </div>
+          <div class="bg-white rounded p-4 border border-gray-200 cursor-pointer hover:border-orange">
+           <svg class="w-full opacity-50" viewbox="0 0 50 50"><path d="M15 12 L35 12 L38 22 L40 40 L10 40 L12 22 Z" stroke="#1a3d2e" stroke-width="1" fill="none" />
+           </svg>
+          </div>
+          <div class="bg-white rounded p-4 border border-gray-200 cursor-pointer hover:border-orange">
+           <svg class="w-full opacity-50" viewbox="0 0 50 50"><path d="M15 12 L35 12 L38 22 L40 40 L10 40 L12 22 Z" stroke="#1a3d2e" stroke-width="1" fill="none" />
+           </svg>
+          </div>
+          <div class="bg-white rounded p-4 border border-gray-200 cursor-pointer hover:border-orange">
+           <svg class="w-full opacity-50" viewbox="0 0 50 50"><path d="M15 12 L35 12 L38 22 L40 40 L10 40 L12 22 Z" stroke="#1a3d2e" stroke-width="1" fill="none" />
+           </svg>
+          </div>
+         </div>
+        </div><!-- Product Info -->
+        <div><span class="inline-block bg-orange text-white text-xs px-3 py-1 rounded-full font-semibold mb-4">RIDING GEAR</span>
+         <h2 class="font-display text-4xl text-forest mb-2">SCALA RIDING JACKET</h2>
+         <p class="text-lg text-gray-500 mb-4">Level 2 CE Protection</p>
+         <div class="flex items-center gap-4 mb-6"><span class="font-display text-4xl text-forest">₹8,999</span> <span class="text-gray-400 line-through text-xl">₹10,499</span> <span class="bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full font-semibold">14% OFF</span>
+         </div>
+         <div class="mb-8">
+          <h4 class="font-semibold text-charcoal mb-4">KEY FEATURES</h4>
+          <ul class="space-y-3">
+           <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-orange flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg><span class="text-gray-600">Level 2 CE certified protection at shoulders &amp; elbows</span></li>
+           <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-orange flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg><span class="text-gray-600">Breathable mesh panels for optimal ventilation</span></li>
+           <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-orange flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg><span class="text-gray-600">360° reflective strips for night visibility</span></li>
+           <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-orange flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg><span class="text-gray-600">All-weather compatibility with removable liner</span></li>
+          </ul>
+         </div>
+         <div class="mb-8">
+          <h4 class="font-semibold text-charcoal mb-3">SELECT SIZE</h4>
+          <div class="flex gap-3"><button class="w-12 h-12 border border-gray-300 rounded text-charcoal font-semibold hover:border-orange transition">S</button> <button class="w-12 h-12 border-2 border-orange rounded text-charcoal font-semibold bg-orange/5">M</button> <button class="w-12 h-12 border border-gray-300 rounded text-charcoal font-semibold hover:border-orange transition">L</button> <button class="w-12 h-12 border border-gray-300 rounded text-charcoal font-semibold hover:border-orange transition">XL</button> <button class="w-12 h-12 border border-gray-300 rounded text-charcoal font-semibold hover:border-orange transition">XXL</button>
+          </div>
+         </div>
+         <div class="flex gap-4 mb-8"><button class="btn-primary flex-1">ADD TO CART</button> <button class="bg-forest text-white px-8 py-4 font-semibold uppercase tracking-wide hover:bg-light-green transition">BUY NOW</button>
+         </div>
+         <div class="flex items-center gap-6 text-sm text-gray-500">
+          <div class="flex items-center gap-2">
+           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+           </svg> Free Shipping
+          </div>
+          <div class="flex items-center gap-2">
+           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+           </svg> 7-Day Returns
+          </div>
+          <div class="flex items-center gap-2">
+           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+           </svg> 1-Year Warranty
+          </div>
+         </div>
+        </div>
+       </div><!-- Tabs -->
+       <div class="mt-16">
+        <div class="border-b border-gray-200 mb-8">
+         <div class="flex gap-8"><button class="pb-4 border-b-2 border-orange text-orange font-semibold">Specifications</button> <button class="pb-4 text-gray-500 hover:text-forest font-semibold">Description</button> <button class="pb-4 text-gray-500 hover:text-forest font-semibold">Reviews (24)</button>
+         </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+         <div class="space-y-4">
+          <div class="flex justify-between py-3 border-b border-gray-100"><span class="text-gray-500">Material</span> <span class="font-medium">600D Polyester with mesh lining</span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100"><span class="text-gray-500">Protection</span> <span class="font-medium">CE Level 2 (Shoulders &amp; Elbows)</span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100"><span class="text-gray-500">Weight</span> <span class="font-medium">1.8 kg</span>
+          </div>
+         </div>
+         <div class="space-y-4">
+          <div class="flex justify-between py-3 border-b border-gray-100"><span class="text-gray-500">Closure</span> <span class="font-medium">YKK Heavy-duty zippers</span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100"><span class="text-gray-500">Pockets</span> <span class="font-medium">4 External + 2 Internal</span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100"><span class="text-gray-500">Colors</span> <span class="font-medium">Black, Gray, Forest Green</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section><!-- Related Products -->
+     <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+       <h3 class="font-display text-3xl text-forest mb-8">RELATED PRODUCTS</h3>
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="product-card rounded-lg overflow-hidden cursor-pointer">
+         <div class="aspect-square bg-gray-100 p-6">
+          <svg class="w-full h-full opacity-50" viewbox="0 0 100 100"><ellipse cx="50" cy="45" rx="35" ry="30" stroke="#1a3d2e" stroke-width="2" fill="none" /> <path d="M15 45 Q50 85 85 45" stroke="#1a3d2e" stroke-width="2" fill="none" />
+          </svg>
+         </div>
+         <div class="p-4">
+          <p class="font-medium text-sm">SMK Agnar Helmet</p>
+          <p class="font-display text-xl text-forest">₹5,200</p>
+         </div>
+        </div>
+        <div class="product-card rounded-lg overflow-hidden cursor-pointer">
+         <div class="aspect-square bg-gray-100 p-6">
+          <svg class="w-full h-full opacity-50" viewbox="0 0 100 100"><rect x="30" y="25" width="40" height="55" rx="3" stroke="#1a3d2e" stroke-width="2" fill="none" /> <line x1="35" y1="40" x2="65" y2="40" stroke="#1a3d2e" stroke-width="1.5" />
+          </svg>
+         </div>
+         <div class="p-4">
+          <p class="font-medium text-sm">Riding Pants</p>
+          <p class="font-display text-xl text-forest">₹6,499</p>
+         </div>
+        </div>
+        <div class="product-card rounded-lg overflow-hidden cursor-pointer">
+         <div class="aspect-square bg-gray-100 p-6">
+          <svg class="w-full h-full opacity-50" viewbox="0 0 100 100"><path d="M25 60 Q30 30 50 25 Q70 30 75 60" stroke="#1a3d2e" stroke-width="2" fill="none" /> <ellipse cx="50" cy="65" rx="30" ry="12" stroke="#1a3d2e" stroke-width="2" fill="none" />
+          </svg>
+         </div>
+         <div class="p-4">
+          <p class="font-medium text-sm">Riding Gloves</p>
+          <p class="font-display text-xl text-forest">₹1,899</p>
+         </div>
+        </div>
+        <div class="product-card rounded-lg overflow-hidden cursor-pointer">
+         <div class="aspect-square bg-gray-100 p-6">
+          <svg class="w-full h-full opacity-50" viewbox="0 0 100 100"><path d="M30 70 L35 30 L65 30 L70 70 Z" stroke="#1a3d2e" stroke-width="2" fill="none" /> <ellipse cx="50" cy="70" rx="20" ry="8" stroke="#1a3d2e" stroke-width="2" fill="none" />
+          </svg>
+         </div>
+         <div class="p-4">
+          <p class="font-medium text-sm">Riding Boots</p>
+          <p class="font-display text-xl text-forest">₹4,299</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     
+    </section><!-- Footer -->
+     <footer class="bg-forest py-12">
+      <div class="max-w-7xl mx-auto px-6">
+       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+         <svg class="w-8 h-8 text-orange" viewbox="0 0 40 40" fill="none"><path d="M20 5L35 35H5L20 5Z" stroke="currentColor" stroke-width="2.5" fill="none" /> <circle cx="20" cy="22" r="6" stroke="currentColor" stroke-width="2" />
+         </svg><span class="font-display text-xl text-white">MOTOTREK</span>
+        </div>
+        <p class="text-gray-400 text-sm">© 2024 MotoTrek. Gear Up &amp; Explore Beyond.</p>
+        <div class="flex gap-4"><a href="#" class="text-gray-400 hover:text-orange transition text-sm">Privacy</a> <a href="#" class="text-gray-400 hover:text-orange transition text-sm">Terms</a> <a href="#" class="text-gray-400 hover:text-orange transition text-sm" onclick="goToSlide(6)">Contact</a>
+        </div>
+       </div>
+      </div>
+     </footer>
+   
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      brand_name: 'MOTOTREK',
+      tagline: 'Gear Up. Explore Beyond.',
+      hero_headline: 'GEAR UP. EXPLORE BEYOND.',
+      contact_email: 'hello@mototrek.in',
+      contact_phone: '+91 98765 43210',
+      background_color: '#f8f6f3',
+      surface_color: '#ffffff',
+      text_color: '#2d2d2d',
+      primary_action_color: '#c45d2a',
+      secondary_action_color: '#1a3d2e',
+      font_family: 'Inter',
+      font_size: 16
+    };
+    
+    // Element SDK integration
+    function updateUI(config) {
+      // Update brand name
+      const brandElements = document.querySelectorAll('#brand-name');
+      brandElements.forEach(el => {
+        if (el) el.textContent = config.brand_name || defaultConfig.brand_name;
+      });
+      
+      // Update hero headline
+      const heroHeadline = document.getElementById('hero-headline');
+      if (heroHeadline) {
+        const headline = config.hero_headline || defaultConfig.hero_headline;
+        heroHeadline.innerHTML = headline.replace('. ', '.<br/>');
+      }
+      
+      // Update footer tagline
+      const footerTagline = document.getElementById('footer-tagline');
+      if (footerTagline) {
+        footerTagline.textContent = config.tagline || defaultConfig.tagline;
+      }
+      
+      // Update contact info
+      const contactEmail = document.getElementById('contact-email-display');
+      if (contactEmail) {
+        contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
+      }
+      
+      const footerEmail = document.getElementById('footer-email');
+      if (footerEmail) {
+        footerEmail.textContent = config.contact_email || defaultConfig.contact_email;
+      }
+      
+      const contactPhone = document.getElementById('contact-phone');
+      if (contactPhone) {
+        contactPhone.textContent = config.contact_phone || defaultConfig.contact_phone;
+      }
+      
+      // Update colors
+      document.documentElement.style.setProperty('--off-white', config.background_color || defaultConfig.background_color);
+      document.documentElement.style.setProperty('--burnt-orange', config.primary_action_color || defaultConfig.primary_action_color);
+      document.documentElement.style.setProperty('--forest-green', config.secondary_action_color || defaultConfig.secondary_action_color);
+      document.documentElement.style.setProperty('--charcoal', config.text_color || defaultConfig.text_color);
+      
+      // Update font
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      document.body.style.fontFamily = `'${fontFamily}', sans-serif`;
+      
+      // Update font size
+      const fontSize = config.font_size || defaultConfig.font_size;
+      document.body.style.fontSize = `${fontSize}px`;
+    }
+    
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig: defaultConfig,
+        onConfigChange: async (config) => {
+          updateUI(config);
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => { config.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => { config.primary_action_color = value; window.elementSdk.setConfig({ primary_action_color: value }); }
+            },
+            {
+              get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+              set: (value) => { config.secondary_action_color = value; window.elementSdk.setConfig({ secondary_action_color: value }); }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => { config.font_family = value; window.elementSdk.setConfig({ font_family: value }); }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => { config.font_size = value; window.elementSdk.setConfig({ font_size: value }); }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['brand_name', config.brand_name || defaultConfig.brand_name],
+          ['tagline', config.tagline || defaultConfig.tagline],
+          ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
+          ['contact_email', config.contact_email || defaultConfig.contact_email],
+          ['contact_phone', config.contact_phone || defaultConfig.contact_phone]
+        ])
+      });
+    } else {
+      // Fallback if SDK not available
+      updateUI(defaultConfig);
+    }
+  
+  </script>
+</html>
