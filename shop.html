@@ -232,7 +232,6 @@
                 class="h-12 w-auto object-contain">
           </a>
         </div>
-
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-8">
           <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a> 
@@ -246,19 +245,18 @@
         <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
           ☰
         </button>
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a> 
-          <a href="shop.html" class="nav-link text-orange text-sm font-medium">SHOP</a> 
-          <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a> 
-          <a href="about.html" class="nav-link text-white text-sm font-medium">ABOUT</a> 
-          <a href="contact.html" class="nav-link text-white text-sm font-medium">CONTACT</a>
-        </div>
-
-        <!-- Mobile Button -->
         <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
           ☰
-        </button>
+          <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
+          <div class="flex flex-col gap-4 text-white text-sm font-medium">
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="events.html">EVENTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
+        </div>
+</button>
     </nav>
     
     <!-- Shop Banner -->
@@ -300,10 +298,12 @@
     
   
      
-    </section><!-- Footer -->
+    </section>
+    
+    <!-- Footer -->
      <footer class="bg-forest py-12">
       <div class="max-w-7xl mx-auto px-6">
-       <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center">
         <img src="images/mt-images/logo.webp"
             alt="Mototrek Logo"
@@ -312,57 +312,63 @@
         <p class="text-gray-400 text-sm">© 2026 Mototrek. Gear Up &amp; Explore Beyond.</p>
         <div class="flex items-center gap-5">
 
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/mototrek.in"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-gray-400 hover:text-orange transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5C18.216 4 20 5.784 20 7.75v8.5C20 18.216 18.216 20 16.25 20h-8.5C5.784 20 4 18.216 4 16.25v-8.5C4 5.784 5.784 4 7.75 4zm4.25 3.5A4.75 4.75 0 1016.75 12 4.756 4.756 0 0012 7.5zm0 2A2.75 2.75 0 119.25 12 2.754 2.754 0 0112 9.5zm5-3a1 1 0 11-1 1 1 1 0 011-1z"/>
-        </svg>
-      </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/mototrek.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5C18.216 4 20 5.784 20 7.75v8.5C20 18.216 18.216 20 16.25 20h-8.5C5.784 20 4 18.216 4 16.25v-8.5C4 5.784 5.784 4 7.75 4zm4.25 3.5A4.75 4.75 0 1016.75 12 4.756 4.756 0 0012 7.5zm0 2A2.75 2.75 0 119.25 12 2.754 2.754 0 0112 9.5zm5-3a1 1 0 11-1 1 1 1 0 011-1z"/>
+          </svg>
+        </a>
 
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/profile.php?id=61587946781857"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-gray-400 hover:text-orange transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8.07V12h2.43V9.8c0-2.4 1.43-3.73 3.63-3.73 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z"/>
-        </svg>
-      </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61587946781857"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8.07V12h2.43V9.8c0-2.4 1.43-3.73 3.63-3.73 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z"/>
+          </svg>
+        </a>
 
-      <!-- YouTube (Dummy for now) -->
-      <a href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-gray-400 hover:text-orange transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.6A3 3 0 00.5 6.2 31.7 31.7 0 000 12a31.7 31.7 0 00.5 5.8 3 3 0 002.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 002.1-2.1A31.7 31.7 0 0024 12a31.7 31.7 0 00-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"/>
-        </svg>
-      </a>
+        <!-- YouTube -->
+          <a href="https://www.youtube.com/channel/UCIO2H7Lj8PzWQmA-h-7K16w"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-400 hover:text-orange transition cursor-pointer">
 
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/company/mototrekadventures/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-gray-400 hover:text-orange transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.45 20.45h-3.55v-5.6c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.95v5.69H9.35V9h3.4v1.56h.05c.47-.89 1.63-1.83 3.35-1.83 3.58 0 4.24 2.36 4.24 5.42v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/>
-        </svg>
-      </a>
+            <svg class="w-5 h-5 pointer-events-none"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+              <path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.6A3 3 0 00.5 6.2 31.7 31.7 0 000 12a31.7 31.7 0 00.5 5.8 3 3 0 002.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 002.1-2.1A31.7 31.7 0 0024 12a31.7 31.7 0 00-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        
+          <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/mototrekadventures/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.45 20.45h-3.55v-5.6c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.95v5.69H9.35V9h3.4v1.56h.05c.47-.89 1.63-1.83 3.35-1.83 3.58 0 4.24 2.36 4.24 5.42v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/>
+          </svg>
+        </a>
 
-      <!-- X (Dummy for now) -->
-      <a href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-gray-400 hover:text-orange transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.244 2H21l-6.5 7.44L22 22h-6.828l-5.35-6.99L3.8 22H1l6.93-7.93L2 2h6.828l4.85 6.32L18.244 2z"/>
-        </svg>
-      </a>
+        <!-- X -->
+        <a href="https://x.com/MototrekIndia"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition cursor-pointer">
 
-    </div>
+          <svg class="w-5 h-5 pointer-events-none"
+              fill="currentColor"
+              viewBox="0 0 24 24">
+            <path d="M18.244 2H21l-6.5 7.44L22 22h-6.828l-5.35-6.99L3.8 22H1l6.93-7.93L2 2h6.828l4.85 6.32L18.244 2z"/>
+          </svg>
+        </a>
+
+      </div>
        </div>
       </div>
      </footer>

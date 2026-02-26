@@ -196,7 +196,7 @@
  <body class="h-full">
   
    <!-- Navigation -->
-    <nav class="bg-forest fixed w-full top-0 z-50">
+    <nav class="bg-forest fixed w-full top-0 z-50 relative">
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <!-- Logo -->
@@ -210,7 +210,7 @@
         <div class="hidden md:flex items-center gap-8">
           <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a>
           <a href="shop.html" class="nav-link text-white text-sm font-medium">SHOP</a>
-          <a href="treks.html" class="nav-link text-white text-sm font-medium">TREKS</a>
+          <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a>
           <a href="about.html" class="nav-link text-orange text-sm font-medium">ABOUT</a>
           <a href="contact.html" class="nav-link text-white text-sm font-medium">CONTACT</a>
         </div>
@@ -227,7 +227,7 @@
         <div class="flex flex-col gap-4 text-white text-sm font-medium">
           <a href="index.html">HOME</a>
           <a href="shop.html">SHOP</a>
-          <a href="treks.html">TREKS</a>
+          <a href="events.html">EVENTS</a>
           <a href="about.html">ABOUT</a>
           <a href="contact.html">CONTACT</a>
         </div>
@@ -373,7 +373,9 @@
        </div>
       </div>
      
-    </section><!-- Footer -->
+    </section>
+    
+    <!-- Footer -->
      <footer class="bg-forest py-12">
       <div class="max-w-7xl mx-auto px-6">
        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -405,17 +407,20 @@
           </svg>
         </a>
 
-        <!-- YouTube (Dummy for now) -->
-        <a href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-gray-400 hover:text-orange transition">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.6A3 3 0 00.5 6.2 31.7 31.7 0 000 12a31.7 31.7 0 00.5 5.8 3 3 0 002.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 002.1-2.1A31.7 31.7 0 0024 12a31.7 31.7 0 00-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"/>
-          </svg>
-        </a>
+        <!-- YouTube -->
+          <a href="https://www.youtube.com/channel/UCIO2H7Lj8PzWQmA-h-7K16w"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-400 hover:text-orange transition cursor-pointer">
 
-        <!-- LinkedIn -->
+            <svg class="w-5 h-5 pointer-events-none"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+              <path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.6A3 3 0 00.5 6.2 31.7 31.7 0 000 12a31.7 31.7 0 00.5 5.8 3 3 0 002.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 002.1-2.1A31.7 31.7 0 0024 12a31.7 31.7 0 00-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        
+          <!-- LinkedIn -->
         <a href="https://www.linkedin.com/company/mototrekadventures/"
           target="_blank"
           rel="noopener noreferrer"
@@ -425,12 +430,15 @@
           </svg>
         </a>
 
-        <!-- X (Dummy for now) -->
-        <a href="#"
+        <!-- X -->
+        <a href="https://x.com/MototrekIndia"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-400 hover:text-orange transition">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          class="text-gray-400 hover:text-orange transition cursor-pointer">
+
+          <svg class="w-5 h-5 pointer-events-none"
+              fill="currentColor"
+              viewBox="0 0 24 24">
             <path d="M18.244 2H21l-6.5 7.44L22 22h-6.828l-5.35-6.99L3.8 22H1l6.93-7.93L2 2h6.828l4.85 6.32L18.244 2z"/>
           </svg>
         </a>
@@ -512,6 +520,11 @@
     });
     </script>
 </body>
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+</script>
 </html>
 
 
