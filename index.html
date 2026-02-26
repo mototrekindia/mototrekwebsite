@@ -207,7 +207,7 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full">
-  ><!-- SLIDE 1 - HOME PAGE -->
+  <!-- SLIDE 1 - HOME PAGE -->
    <!-- Navigation -->
      <nav class="bg-forest fixed w-full top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -250,11 +250,16 @@
          <p class="text-orange font-semibold tracking-widest text-sm mb-4">ADVENTURE AWAITS</p>
          <h1 id="hero-headline" class="font-display text-6xl md:text-8xl text-white leading-none mb-6">GEAR UP.<br>
           EXPLORE BEYOND.</h1>
-         <p id="hero-subtext" class="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed max-w-lg">Premium riding &amp; trekking essentials for explorers who move beyond limits.</p>
+         <p id="hero-subtext" class="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed max-w-lg">
+          Explore our top helmets, riding jackets, gloves, trekking bags, boots and bike accessories — curated for weekend riders and serious tourers.
+          </p>
          <div class="flex flex-wrap gap-4">
-  <a href="shop.html" class="btn-primary">EXPLORE GEAR</a>
-  <a href="treks.html" class="btn-secondary">VIEW TREKS</a>
-</div>
+        <a href="shop.html" class="btn-primary">EXPLORE GEAR</a>
+        <a href="treks.html" class="btn-secondary">VIEW TREKS</a>
+        <p class="text-gray-400 text-sm mt-4">
+          Trusted brands. Real riding experience. Community-tested gear.
+          </p>
+      </div>
         </div>
        </div>
       </div>
@@ -262,52 +267,87 @@
        <svg class="w-6 h-6 text-white opacity-60" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
        </svg>
       </div>
-     </section><!-- Featured Categories -->
+     </section>
+     
+     <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        
+        <p class="text-orange font-semibold tracking-widest text-sm mb-3">
+          WHAT YOU'LL FIND HERE
+        </p>
+        
+        <h2 class="font-display text-4xl text-forest mb-6">
+          EVERYTHING FOR YOUR RIDE
+        </h2>
+
+        <p class="text-gray-600 max-w-3xl mx-auto mb-8">
+          From premium helmets and riding jackets to hydration bags, boots and touring accessories — Mototrek brings together top brands and reliable gear for every adventure.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold text-forest">
+          <span>HELMETS</span>
+          <span>•</span>
+          <span>RIDING JACKETS</span>
+          <span>•</span>
+          <span>GLOVES</span>
+          <span>•</span>
+          <span>BOOTS</span>
+          <span>•</span>
+          <span>BAGS</span>
+          <span>•</span>
+          <span>BIKE ACCESSORIES</span>
+        </div>
+
+      </div>
+    </section>
+
+<!-- Featured Categories -->
      <section class="py-20 bg-offwhite">
       <div class="max-w-7xl mx-auto px-6">
        <div class="text-center mb-16">
-        <p class="text-orange font-semibold tracking-widest text-sm mb-3">OUR COLLECTION</p>
+        <p class="text-orange font-semibold tracking-widest text-sm mb-3">TOP GEAR FOR RIDERS & TREKKERS</p>
         <h2 class="font-display text-4xl md:text-5xl text-forest">FEATURED CATEGORIES</h2>
        </div>
        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><!-- Category 1 -->
-        <div class="category-card h-80 rounded-lg cursor-pointer" onclick="goToSlide(2)">
-         <div class="absolute inset-0 bg-forest category-img">
-          <svg class="w-full h-full opacity-30" viewbox="0 0 200 200"><ellipse cx="100" cy="80" rx="60" ry="50" stroke="white" stroke-width="2" fill="none" /> <path d="M40 80 Q100 140 160 80" stroke="white" stroke-width="2" fill="none" /> <circle cx="100" cy="60" r="20" stroke="white" stroke-width="1.5" fill="none" />
-          </svg>
-         </div>
+        <div class="category-card h-80 rounded-lg cursor-pointer" onclick="window.location.href='shop.html?category=HELMETS'">
+         <div class="absolute inset-0 category-img">
+          <img src="images/product-images/mt_product_1.webp"
+              class="w-full h-full object-cover">
+        </div>
          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
           <h3 class="font-display text-2xl text-white mb-2">HELMETS</h3>
-          <p class="text-gray-300 text-sm">Protection meets performance</p>
+          <p class="text-gray-300 text-sm">Full face, flip-up, off-road and open face helmets.</p>
          </div>
         </div><!-- Category 2 -->
-        <div class="category-card h-80 rounded-lg" onclick="goToSlide(2)">
-         <div class="absolute inset-0 bg-light-green category-img">
-          <svg class="w-full h-full opacity-30" viewbox="0 0 200 200"><path d="M60 50 L140 50 L150 80 L160 160 L40 160 L50 80 Z" stroke="white" stroke-width="2" fill="none" /> <line x1="60" y1="50" x2="60" y2="30" stroke="white" stroke-width="2" /> <line x1="140" y1="50" x2="140" y2="30" stroke="white" stroke-width="2" />
-          </svg>
-         </div>
+        <div class="category-card h-80 rounded-lg" onclick="window.location.href='shop.html?category=RIDING GEAR'">
+         <div class="absolute inset-0 category-img">
+          <img src="images/product-images/mt_product_70.webp"
+              class="w-full h-full object-cover">
+        </div>
          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
           <h3 class="font-display text-2xl text-white mb-2">RIDING GEAR</h3>
-          <p class="text-gray-300 text-sm">Safety with comfort</p>
+          <p class="text-gray-300 text-sm">Jackets, pants, gloves and protective essentials.</p>
          </div>
         </div><!-- Category 3 -->
-        <div class="category-card h-80 rounded-lg" onclick="goToSlide(2)">
-         <div class="absolute inset-0 category-img" style="background: #2a4a3a;">
-          <svg class="w-full h-full opacity-30" viewbox="0 0 200 200"><path d="M70 40 L130 40 L145 160 L55 160 Z" stroke="white" stroke-width="2" fill="none" /> <path d="M70 40 Q100 20 130 40" stroke="white" stroke-width="2" fill="none" /> <line x1="80" y1="70" x2="120" y2="70" stroke="white" stroke-width="1.5" /> <line x1="75" y1="100" x2="125" y2="100" stroke="white" stroke-width="1.5" />
-          </svg>
-         </div>
+        <div class="category-card h-80 rounded-lg" onclick="window.location.href='shop.html?category=BAGS'">
+         <div class="absolute inset-0 category-img">
+          <img src="images/product-images/mt_product_115.webp"
+              class="w-full h-full object-cover">
+        </div>
          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-          <h3 class="font-display text-2xl text-white mb-2">TREKKING BACKPACKS</h3>
-          <p class="text-gray-300 text-sm">Built for endurance</p>
+          <h3 class="font-display text-2xl text-white mb-2">BAGS</h3>
+          <p class="text-gray-300 text-sm">Hydration packs, tank bags and trekking backpacks.</p>
          </div>
-        </div><!-- Category 4 -->
-        <div class="category-card h-80 rounded-lg" onclick="goToSlide(2)">
-         <div class="absolute inset-0 category-img" style="background: #3a5a4a;">
-          <svg class="w-full h-full opacity-30" viewbox="0 0 200 200"><circle cx="80" cy="80" r="25" stroke="white" stroke-width="2" fill="none" /> <circle cx="80" cy="80" r="15" stroke="white" stroke-width="1" fill="none" /> <path d="M105 80 L150 80" stroke="white" stroke-width="2" /> <circle cx="130" cy="130" r="20" stroke="white" stroke-width="2" fill="none" /> <path d="M125 125 L135 135 M125 135 L135 125" stroke="white" stroke-width="1.5" />
-          </svg>
-         </div>
+        </div>
+        <!-- Category 4 -->
+        <div class="category-card h-80 rounded-lg" onclick="window.location.href='shop.html?category=BIKE ACCESSORIES'">
+         <div class="absolute inset-0 category-img">
+          <img src="images/product-images/mt_product_140.webp"
+              class="w-full h-full object-cover">
+        </div>
          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-          <h3 class="font-display text-2xl text-white mb-2">ACCESSORIES</h3>
-          <p class="text-gray-300 text-sm">Lights, hydration &amp; essentials</p>
+          <h3 class="font-display text-2xl text-white mb-2">BIKE ACCESSORIES</h3>
+          <p class="text-gray-300 text-sm">Intercoms, fog lights, mounts and riding tools.</p>
          </div>
         </div>
        </div>
@@ -322,31 +362,31 @@
          <h3 class="font-display text-3xl md:text-4xl text-white">TESTED ON ROADS.</h3>
          <h3 class="font-display text-3xl md:text-4xl text-white">TRUSTED ON TRAILS.</h3>
         </div>
-       </div><button class="btn-secondary border-white text-white hover:bg-white hover:text-orange" onclick="goToSlide(2)"> SHOP NOW </button>
-      </div>
+       </div><a href="shop.html" 
+        class="btn-secondary border-white text-white hover:bg-white hover:text-orange inline-block text-center">
+        SHOP NOW
+      </a>
      </section><!-- Community Section -->
      <section class="py-20 bg-offwhite">
       <div class="max-w-7xl mx-auto px-6">
        <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="relative">
-         <div class="aspect-video bg-forest rounded-lg overflow-hidden">
-          <svg class="w-full h-full opacity-40" viewbox="0 0 400 225"><defs>
-            <lineargradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-             <stop offset="0%" style="stop-color:#c45d2a;stop-opacity:0.3" />
-             <stop offset="100%" style="stop-color:#1a3d2e;stop-opacity:1" />
-            </lineargradient>
-           </defs> <rect fill="url(#skyGrad)" width="400" height="225" /> <path d="M0 180 Q100 120 200 160 Q300 200 400 140 L400 225 L0 225 Z" fill="#1a3d2e" /> <circle cx="50" cy="150" r="15" fill="#2d2d2d" /> <circle cx="90" cy="145" r="15" fill="#2d2d2d" /> <circle cx="130" cy="155" r="15" fill="#2d2d2d" /> <circle cx="170" cy="140" r="15" fill="#2d2d2d" /> <circle cx="320" cy="120" r="30" fill="#c45d2a" opacity="0.4" />
-          </svg>
-         </div>
+         <div class="aspect-video rounded-lg overflow-hidden">
+          <img src="images/mt-images/mt-trekwithcommunity.webp"
+              class="w-full h-full object-cover">
+        </div>
          <div class="absolute -bottom-4 -right-4 bg-orange text-white p-6 rounded-lg">
-          <p class="font-display text-3xl">500+</p>
+          <p class="font-display text-3xl">4000+</p>
           <p class="text-sm">ACTIVE RIDERS</p>
          </div>
         </div>
         <div>
          <p class="text-orange font-semibold tracking-widest text-sm mb-3">JOIN THE TRIBE</p>
          <h2 class="font-display text-4xl md:text-5xl text-forest mb-6">RIDE WITH THE COMMUNITY</h2>
-         <p class="text-gray-600 leading-relaxed mb-8">Join a passionate community of riders and trekkers who share your spirit of adventure. Group rides, trail expeditions, and unforgettable experiences await.</p><button class="btn-primary" onclick="goToSlide(4)">EXPLORE TREKS</button>
+         <p class="text-gray-600 leading-relaxed mb-8">
+          Mototrek is more than just a store. We are a community of riders and trekkers. Join our weekend rides, explore new trails, and gear up with products trusted by our own members.
+          </p>
+         <a href="treks.html" class="btn-primary">EXPLORE TREKS</a>
         </div>
        </div>
       </div>
@@ -360,7 +400,7 @@
             alt="Mototrek Logo"
             class="h-10 w-auto object-contain">
       </div>
-        <p class="text-gray-400 text-sm">© 2026 MotoTrek. Gear Up &amp; Explore Beyond.</p>
+        <p class="text-gray-400 text-sm">© 2026 Mototrek. Gear Up &amp; Explore Beyond.</p>
         <div class="flex items-center gap-5">
 
         <div class="flex items-center gap-5">
