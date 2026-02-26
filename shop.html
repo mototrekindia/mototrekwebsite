@@ -233,17 +233,36 @@
           </a>
         </div>
 
-        <div class="flex items-center gap-12">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
           <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a> 
           <a href="shop.html" class="nav-link text-orange text-sm font-medium">SHOP</a> 
-          <a href="treks.html" class="nav-link text-white text-sm font-medium">TREKS</a> 
+          <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a> 
           <a href="about.html" class="nav-link text-white text-sm font-medium">ABOUT</a> 
           <a href="contact.html" class="nav-link text-white text-sm font-medium">CONTACT</a>
         </div>
+
+        <!-- Mobile Button -->
+        <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
+          ☰
+        </button>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a> 
+          <a href="shop.html" class="nav-link text-orange text-sm font-medium">SHOP</a> 
+          <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a> 
+          <a href="about.html" class="nav-link text-white text-sm font-medium">ABOUT</a> 
+          <a href="contact.html" class="nav-link text-white text-sm font-medium">CONTACT</a>
+        </div>
+
+        <!-- Mobile Button -->
+        <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
+          ☰
+        </button>
     </nav>
     
     <!-- Shop Banner -->
-     <section class="relative pt-16" style="height: 45vh; min-height: 320px;">
+     <section class="relative pt-20 min-h-[260px] md:h-[45vh]">
       <div class="absolute inset-0 bg-forest">
        <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a3d2e 0%, #2a5442 100%);"></div>
        <svg class="absolute right-0 bottom-0 w-64 h-64 opacity-10" viewbox="0 0 200 200"><circle cx="100" cy="100" r="80" stroke="white" stroke-width="1" fill="none" /> <circle cx="100" cy="100" r="60" stroke="white" stroke-width="1" fill="none" /> <circle cx="100" cy="100" r="40" stroke="white" stroke-width="1" fill="none" />
@@ -252,17 +271,17 @@
       <div class="relative z-10 h-full flex items-center">
        <div class="max-w-7xl mx-auto px-6 w-full text-center">
         <p class="text-orange font-semibold tracking-widest text-sm mb-4">MOTOTREK STORE</p>
-        <h1 class="font-display text-5xl md:text-6xl text-white mb-4">EXPLORE OUR GEAR COLLECTION</h1>
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-4">EXPLORE OUR GEAR COLLECTION</h1>
         <p class="text-gray-300 text-lg max-w-xl mx-auto">Engineered for safety. Designed for adventure.</p>
        </div>
       </div>
      </section>
-     <section class="bg-white border-b sticky top-16 z-40">
+     <section class="bg-white border-b sticky top-[72px] md:top-16 z-40">
       <div class="max-w-7xl mx-auto px-6 py-4">
 
         <!-- MAIN CATEGORY ROW -->
         <div id="mainCategories" 
-            class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+            class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide whitespace-nowrap">
         </div>
 
         <!-- SUBCATEGORY ROW -->
@@ -275,7 +294,7 @@
      <!-- Product Grid -->
      <section class="py-12 bg-offwhite">
       <div class="max-w-7xl mx-auto px-6">
-       <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+       <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
 
     <div id="pagination" class="flex justify-center items-center gap-2 mt-12"></div>
     
@@ -284,13 +303,13 @@
     </section><!-- Footer -->
      <footer class="bg-forest py-12">
       <div class="max-w-7xl mx-auto px-6">
-       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+       <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         <div class="flex items-center">
         <img src="images/mt-images/logo.webp"
             alt="Mototrek Logo"
             class="h-10 w-auto object-contain">
       </div>
-        <p class="text-gray-400 text-sm">© 2026 MotoTrek. Gear Up &amp; Explore Beyond.</p>
+        <p class="text-gray-400 text-sm">© 2026 Mototrek. Gear Up &amp; Explore Beyond.</p>
         <div class="flex items-center gap-5">
 
       <!-- Instagram -->
@@ -647,7 +666,7 @@ if (selectedCategory === "all") {
 
         <div class="aspect-square bg-gray-100 relative">
           <img src="${product.image}" 
-            class="w-full h-full object-contain p-12" />
+            class="w-full h-full object-contain p-6 md:p-12" />
         </div>
 
         <div class="p-6">
@@ -655,12 +674,12 @@ if (selectedCategory === "all") {
             ${product.subcategory || ""}
           </span>
 
-          <h3 class="font-semibold text-lg text-charcoal mt-1 mb-2">
+          <h3 class="font-semibold text-base md:text-lg text-charcoal mt-1 mb-2">
             ${product.name}
           </h3>
 
           <div class="flex items-center justify-between">
-            <span class="font-display text-2xl text-forest">
+            <span class="font-display text-xl md:text-2xl text-forest">
               ₹${product.price}
             </span>
 
@@ -748,9 +767,11 @@ renderSubCategories();
 renderProducts();
 
 </script>
-
-
-
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+</script>
 </html>
 
 
