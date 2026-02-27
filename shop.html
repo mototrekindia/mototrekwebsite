@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6SMLLZHP3"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'G-S6SMLLZHP3');
+ </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mototrek Store | Riding Gear, Helmets & Bike Accessories Pune</title>
+  <meta name="description" content="Shop premium riding gear, helmets, gloves, boots and bike accessories at Mototrek Pune. Quality gear built for adventure.">
+  <link rel="canonical" href="https://mototrek.in/shop.html">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest-green: #1a3d2e;
+      --burnt-orange: #c45d2a;
+      --off-white: #f8f6f3;
+      --charcoal: #2d2d2d;
+      --light-green: #2a5442;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--off-white);
+      color: var(--charcoal);
+    }
+    
+    .font-display {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    
+    .bg-forest { background-color: var(--forest-green); }
+    .bg-orange { background-color: var(--burnt-orange); }
+    .bg-offwhite { background-color: var(--off-white); }
+    .text-forest { color: var(--forest-green); }
+    .text-orange { color: var(--burnt-orange); }
+    .text-charcoal { color: var(--charcoal); }
+    
+    .btn-primary {
+      background: var(--burnt-orange);
+      color: white;
+      padding: 14px 32px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 14px;
+    }
+    
+    .btn-primary:hover {
+      background: #a84d22;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 14px 32px;
+      font-weight: 600;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 14px;
+    }
+    
+    .btn-secondary:hover {
+      background: white;
+      color: var(--forest-green);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(26, 61, 46, 0.9) 0%, rgba(26, 61, 46, 0.7) 50%, rgba(196, 93, 42, 0.3) 100%);
+    }
+    
+    .product-card {
+      background: white;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(26, 61, 46, 0.15);
+    }
+    
+    .category-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .category-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26, 61, 46, 0.95), transparent 60%);
+    }
+    
+    .category-card:hover .category-img {
+      transform: scale(1.1);
+    }
+    
+    .category-img {
+      transition: transform 0.5s ease;
+    }
+    
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--burnt-orange);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .slide-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    
+    .slide-dot.active {
+      background: var(--burnt-orange);
+      transform: scale(1.2);
+    }
+    
+    .slide-dot:hover {
+      background: rgba(255,255,255,0.6);
+    }
+    
+    .trek-card {
+      background: white;
+      border-left: 4px solid var(--burnt-orange);
+      transition: all 0.3s ease;
+    }
+    
+    .trek-card:hover {
+      transform: translateX(8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--forest-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .scroll-container {
+      overflow-y: auto;
+      flex: 1;
+    }
+    .category-btn {
+  padding: 8px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+  background: #1a3d2e;
+  color: white;
+}
+
+.category-active {
+  background: #1a3d2e;
+  color: white;
+  border-color: #1a3d2e;
+}
+
+.subcategory-active {
+  background: #c45d2a;
+  color: white;
+  border-color: #c45d2a;
+} 
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+ <body class="h-full">
+
+    <!-- Navigation -->
+     <nav class="bg-forest fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="images/mt-images/logo.webp"
+                alt="Mototrek Logo"
+                class="h-12 w-auto object-contain">
+          </a>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a> 
+          <a href="shop.html" class="nav-link text-orange text-sm font-medium">SHOP</a> 
+          <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a> 
+          <a href="about.html" class="nav-link text-white text-sm font-medium">ABOUT</a> 
+          <a href="contact.html" class="nav-link text-white text-sm font-medium">CONTACT</a>
+        </div>
+
+        <!-- Mobile Button -->
+     <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
+       ☰
+     </button>
+     
+     <!-- Mobile Menu -->
+     <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
+       <div class="flex flex-col gap-4 text-white text-sm font-medium">
+         <a href="index.html">HOME</a>
+         <a href="shop.html">SHOP</a>
+         <a href="events.html">EVENTS</a>
+         <a href="about.html">ABOUT</a>
+         <a href="contact.html">CONTACT</a>
+       </div>
+     </div>
+    
+    <!-- Shop Banner -->
+      <section class="relative pt-24 min-h-[75vh] md:min-h-[85vh] overflow-hidden">
+
+        <img src="images/mt-images/shop-banner.webp"
+            alt="Mototrek Shop Banner"
+            class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative z-10 flex items-center h-full">
+          <div class="max-w-7xl mx-auto px-6 w-full text-center">
+            <p class="text-orange font-semibold tracking-widest text-sm mb-4">
+              MOTOTREK STORE
+            </p>
+
+            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-4">
+              EXPLORE OUR GEAR COLLECTION
+            </h1>
+
+            <p class="text-gray-300 text-lg max-w-xl mx-auto">
+              Engineered for safety. Designed for adventure.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="bg-white border-b sticky top-[72px] md:top-16 z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+
+          <div id="mainCategories"
+              class="flex gap-3 overflow-x-auto pb-2 whitespace-nowrap">
+          </div>
+
+          <div id="subCategories"
+              class="flex gap-3 mt-3 overflow-x-auto pb-1">
+          </div>
+
+        </div>
+      </section>
+
+     <!-- Product Grid -->
+     <section class="py-12 bg-offwhite">
+      <div class="max-w-7xl mx-auto px-6">
+       <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
+
+    <div id="pagination" class="flex justify-center items-center gap-2 mt-12"></div>
+    
+  
+     
+    </section>
+    
+    <!-- Footer -->
+     <footer class="bg-forest py-12">
+      <div class="max-w-7xl mx-auto px-6">
+       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center">
+        <img src="images/mt-images/logo.webp"
+            alt="Mototrek Logo"
+            class="h-10 w-auto object-contain">
+      </div>
+        <p class="text-gray-400 text-sm">© 2026 Mototrek. Gear Up &amp; Explore Beyond.</p>
+        <div class="flex items-center gap-5">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/mototrek.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5C18.216 4 20 5.784 20 7.75v8.5C20 18.216 18.216 20 16.25 20h-8.5C5.784 20 4 18.216 4 16.25v-8.5C4 5.784 5.784 4 7.75 4zm4.25 3.5A4.75 4.75 0 1016.75 12 4.756 4.756 0 0012 7.5zm0 2A2.75 2.75 0 119.25 12 2.754 2.754 0 0112 9.5zm5-3a1 1 0 11-1 1 1 1 0 011-1z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61587946781857"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8.07V12h2.43V9.8c0-2.4 1.43-3.73 3.63-3.73 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+          <a href="https://www.youtube.com/channel/UCIO2H7Lj8PzWQmA-h-7K16w"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-400 hover:text-orange transition cursor-pointer">
+
+            <svg class="w-5 h-5 pointer-events-none"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+              <path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.6A3 3 0 00.5 6.2 31.7 31.7 0 000 12a31.7 31.7 0 00.5 5.8 3 3 0 002.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 002.1-2.1A31.7 31.7 0 0024 12a31.7 31.7 0 00-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        
+          <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/mototrekadventures/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.45 20.45h-3.55v-5.6c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.95v5.69H9.35V9h3.4v1.56h.05c.47-.89 1.63-1.83 3.35-1.83 3.58 0 4.24 2.36 4.24 5.42v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/>
+          </svg>
+        </a>
+
+        <!-- X -->
+        <a href="https://x.com/MototrekIndia"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-400 hover:text-orange transition cursor-pointer">
+
+          <svg class="w-5 h-5 pointer-events-none"
+              fill="currentColor"
+              viewBox="0 0 24 24">
+            <path d="M18.244 2H21l-6.5 7.44L22 22h-6.828l-5.35-6.99L3.8 22H1l6.93-7.93L2 2h6.828l4.85 6.32L18.244 2z"/>
+          </svg>
+        </a>
+
+      </div>
+       </div>
+      </div>
+     </footer>
+   
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      brand_name: 'MOTOTREK',
+      tagline: 'Gear Up. Explore Beyond.',
+      hero_headline: 'GEAR UP. EXPLORE BEYOND.',
+      contact_email: 'hello@mototrek.in',
+      contact_phone: '+91 98765 43210',
+      background_color: '#f8f6f3',
+      surface_color: '#ffffff',
+      text_color: '#2d2d2d',
+      primary_action_color: '#c45d2a',
+      secondary_action_color: '#1a3d2e',
+      font_family: 'Inter',
+      font_size: 16
+    };
+    
+    // Element SDK integration
+    function updateUI(config) {
+      // Update brand name
+      const brandElements = document.querySelectorAll('#brand-name');
+      brandElements.forEach(el => {
+        if (el) el.textContent = config.brand_name || defaultConfig.brand_name;
+      });
+      
+      // Update hero headline
+      const heroHeadline = document.getElementById('hero-headline');
+      if (heroHeadline) {
+        const headline = config.hero_headline || defaultConfig.hero_headline;
+        heroHeadline.innerHTML = headline.replace('. ', '.<br/>');
+      }
+      
+      // Update footer tagline
+      const footerTagline = document.getElementById('footer-tagline');
+      if (footerTagline) {
+        footerTagline.textContent = config.tagline || defaultConfig.tagline;
+      }
+      
+      // Update contact info
+      const contactEmail = document.getElementById('contact-email-display');
+      if (contactEmail) {
+        contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
+      }
+      
+      const footerEmail = document.getElementById('footer-email');
+      if (footerEmail) {
+        footerEmail.textContent = config.contact_email || defaultConfig.contact_email;
+      }
+      
+      const contactPhone = document.getElementById('contact-phone');
+      if (contactPhone) {
+        contactPhone.textContent = config.contact_phone || defaultConfig.contact_phone;
+      }
+      
+      // Update colors
+      document.documentElement.style.setProperty('--off-white', config.background_color || defaultConfig.background_color);
+      document.documentElement.style.setProperty('--burnt-orange', config.primary_action_color || defaultConfig.primary_action_color);
+      document.documentElement.style.setProperty('--forest-green', config.secondary_action_color || defaultConfig.secondary_action_color);
+      document.documentElement.style.setProperty('--charcoal', config.text_color || defaultConfig.text_color);
+      
+      // Update font
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      document.body.style.fontFamily = `'${fontFamily}', sans-serif`;
+      
+      // Update font size
+      const fontSize = config.font_size || defaultConfig.font_size;
+      document.body.style.fontSize = `${fontSize}px`;
+    }
+    
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig: defaultConfig,
+        onConfigChange: async (config) => {
+          updateUI(config);
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => { config.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => { config.primary_action_color = value; window.elementSdk.setConfig({ primary_action_color: value }); }
+            },
+            {
+              get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+              set: (value) => { config.secondary_action_color = value; window.elementSdk.setConfig({ secondary_action_color: value }); }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => { config.font_family = value; window.elementSdk.setConfig({ font_family: value }); }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => { config.font_size = value; window.elementSdk.setConfig({ font_size: value }); }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['brand_name', config.brand_name || defaultConfig.brand_name],
+          ['tagline', config.tagline || defaultConfig.tagline],
+          ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
+          ['contact_email', config.contact_email || defaultConfig.contact_email],
+          ['contact_phone', config.contact_phone || defaultConfig.contact_phone]
+        ])
+      });
+    } else {
+      // Fallback if SDK not available
+      updateUI(defaultConfig);
+    }
+  
+  </script>
+
+
+<!-- ADD THIS BELOW -->
+
+<script src="products.js"></script>
+<script>
+const grid = document.getElementById("productGrid");
+const mainContainer = document.getElementById("mainCategories");
+const subContainer = document.getElementById("subCategories");
+
+let selectedCategory = "all";
+let selectedSub = "all";
+const itemsPerPage = 30;
+let currentPage = 1;
+
+/* ---------------- FIXED CATEGORY STRUCTURE ---------------- */
+
+const categoryStructure = {
+  "HELMETS": ["SMK", "Steelbird", "Studds"],
+  "GLOVES": ["Raida", "Steelbird", "Studds", "Tripole"],
+  "RIDING GEAR": ["Raida", "Scala", "Tripole"],
+  "BOOTS": [],
+  "BAGS": ["Hydration", "Scala", "Tripole"],
+  "BIKE ACCESSORIES": ["Bobo", "BluArmor", "HJG", "Tripole"],
+  "MAINTENANCE": [],
+  "OTHERS": ["Tripole"]
+};
+
+/* ---------------- MAIN CATEGORY RENDER ---------------- */
+
+function renderMainCategories() {
+
+  mainContainer.innerHTML = "";
+
+  mainContainer.innerHTML += `
+    <button onclick="selectCategory('all')" 
+      class="category-btn ${selectedCategory === 'all' ? 'category-active' : ''}">
+      ALL
+    </button>
+  `;
+
+  Object.keys(categoryStructure).forEach(cat => {
+    mainContainer.innerHTML += `
+      <button onclick="selectCategory('${cat}')" 
+        class="category-btn ${selectedCategory === cat ? 'category-active' : ''}">
+        ${cat}
+      </button>
+    `;
+  });
+}
+
+/* ---------------- SUBCATEGORY RENDER ---------------- */
+
+function renderSubCategories() {
+
+  if (selectedCategory === "all") {
+    subContainer.innerHTML = "";
+    return;
+  }
+
+  const subs = categoryStructure[selectedCategory];
+
+  subContainer.innerHTML = "";
+
+  if (subs.length === 0) {
+    return; // No subcategory for this category
+  }
+
+  subContainer.innerHTML += `
+    <button onclick="selectSub('all')" 
+      class="category-btn ${selectedSub === 'all' ? 'subcategory-active' : ''}">
+      ALL
+    </button>
+  `;
+
+  subs.forEach(sub => {
+    subContainer.innerHTML += `
+      <button onclick="selectSub('${sub}')"
+        class="category-btn ${selectedSub === sub ? 'subcategory-active' : ''}">
+        ${sub}
+      </button>
+    `;
+  });
+}
+
+/* ---------------- PRODUCT RENDER ---------------- */
+
+function renderProducts() {
+
+  grid.innerHTML = "";
+
+  let filteredProducts = products.filter(product =>
+  (selectedCategory === "all" || product.category === selectedCategory) &&
+  (selectedSub === "all" || product.subcategory === selectedSub)
+);
+
+if (selectedCategory === "all") {
+
+  // 🔥 YOUR PRIORITY PRODUCT NAMES
+  const priorityNames = [
+    "Studds Riding Gloves SMG2 - Multicolour",
+    "Tripole SummitGrip Waterproof Winter Gloves - M Size",
+    "Tripole Detachable Pants - Charcoal (M Size)",
+    "Tripole Full Sleeve Jersey - Blue (M Size)",
+    "Tripole Full Sleeve Jersey - Rust (M Size)",
+    "Tripole Pocket Fleece Jacket - Psuede Green (M Size)",
+    "Tripole Venture Pant - Green (M Size)",
+    "Tripole Air 62 Liter - Black",
+    "Tripole Hydra Waist Pack - Green",
+    "Tripole Organizer Combo - Sea Green",
+    "Tripole PakEasy 25 Litre - Blue",
+    "Tripole Terra 50 Liter - Blue",
+    "Tripole Astra-A Headlight AAA Cells",
+    "Tripole Hydration Bladder - 2 Litre",
+    "Tripole Soft Flask 500ml - White",
+    "Tripole Trailcore Foldable Poles"
+  ];
+
+  const helmetPriority = [
+    "SMK Flip Up Helmet Gullwing Sonic GL231 Gloss - L",
+    "SMK Full Face Helmet Retro Electro GL621 Gloss - XL",
+    "SMK Full Face Helmet Stellar Sports K Power GL245 Gloss - L",
+    "SMK Full Face Helmet Typhoon Rival GL263 Gloss-M",
+    "SMK Full face Helmet Typhoon RD1 GL264 Gloss - L",
+    "SMK Offroad Helmet Alterra Maverix GL627 Gloss - XL",
+    "Steelbird Air SBA-19 R2K Flip Up - Black",
+    "Steelbird Rox Double Visor Decor - Multicolour"
+  ];
+
+  // 🎯 Separate products
+  const priorityProducts = [];
+  const helmetProducts = [];
+  const remainingProducts = [];
+
+  filteredProducts.forEach(product => {
+
+    if (priorityNames.includes(product.name)) {
+      priorityProducts.push(product);
+
+    } else if (helmetPriority.includes(product.name)) {
+      helmetProducts.push(product);
+
+    } else {
+      remainingProducts.push(product);
+    }
+
+  });
+
+  // 🟢 Put BAGS first inside priority
+  const bagsFirst = priorityProducts.filter(p => p.category === "BAGS");
+  const otherPriority = priorityProducts.filter(p => p.category !== "BAGS");
+
+  filteredProducts = [
+    ...bagsFirst,
+    ...otherPriority,
+    ...helmetProducts,
+    ...remainingProducts
+  ];
+}
+
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  if (currentPage > totalPages) currentPage = 1;
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+
+  const paginatedProducts = filteredProducts.slice(start, end);
+
+  paginatedProducts.forEach(product => {
+
+    grid.innerHTML += `
+      <div class="product-card rounded-lg overflow-hidden cursor-pointer">
+
+        <div class="aspect-square bg-gray-100 relative">
+          <img src="${product.image}" 
+            class="w-full h-full object-contain p-6 md:p-12" />
+        </div>
+
+        <div class="p-6">
+          <span class="text-xs text-orange font-semibold tracking-wide">
+            ${product.subcategory || ""}
+          </span>
+
+          <h3 class="font-semibold text-base md:text-lg text-charcoal mt-1 mb-2">
+            ${product.name}
+          </h3>
+
+          <div class="flex items-center justify-between">
+            <span class="font-display text-xl md:text-2xl text-forest">
+              ₹${product.price}
+            </span>
+
+            <a href="${product.billbookLink}" 
+            class="text-orange font-semibold text-sm hover:underline"
+            ${!product.billbookLink || product.billbookLink === '' ? 'style="pointer-events:none;opacity:0.4;"' : ''}>
+            BUY NOW →
+          </a>
+          </div>
+        </div>
+
+      </div>
+    `;
+  });
+
+  renderPagination(totalPages);
+}
+
+function renderPagination(totalPages) {
+
+  const pagination = document.getElementById("pagination");
+  pagination.innerHTML = "";
+
+  if (totalPages <= 1) return;
+
+  // Previous button
+  if (currentPage > 1) {
+    pagination.innerHTML += `
+      <button onclick="changePage(${currentPage - 1})"
+        class="w-10 h-10 rounded bg-gray-200 font-semibold">
+        ‹
+      </button>
+    `;
+  }
+
+  for (let i = 1; i <= totalPages; i++) {
+    pagination.innerHTML += `
+      <button onclick="changePage(${i})"
+        class="w-10 h-10 rounded font-semibold 
+        ${i === currentPage ? 'bg-forest text-white' : 'bg-gray-200'}">
+        ${i}
+      </button>
+    `;
+  }
+
+  // Next button
+  if (currentPage < totalPages) {
+    pagination.innerHTML += `
+      <button onclick="changePage(${currentPage + 1})"
+        class="w-10 h-10 rounded bg-gray-200 font-semibold">
+        ›
+      </button>
+    `;
+  }
+}
+
+function changePage(page) {
+  currentPage = page;
+  renderProducts();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+/* ---------------- SELECT FUNCTIONS ---------------- */
+
+function selectCategory(cat) {
+  selectedCategory = cat;
+  selectedSub = "all";
+  currentPage = 1;
+  renderMainCategories();
+  renderSubCategories();
+  renderProducts();
+}
+
+function selectSub(sub) {
+  selectedSub = sub;
+  currentPage = 1;
+  renderSubCategories();
+  renderProducts();
+}
+
+/* ---------------- INIT ---------------- */
+
+renderMainCategories();
+renderSubCategories();
+renderProducts();
+
+</script>
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+</script>
+</html>
+
+
+
+
+
+
