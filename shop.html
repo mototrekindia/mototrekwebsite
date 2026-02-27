@@ -221,7 +221,7 @@
  </head>
  <body class="h-full">
 
-    <div class="scroll-container"><!-- Navigation -->
+    <!-- Navigation -->
      <nav class="bg-forest fixed w-full top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
@@ -258,35 +258,46 @@
      </div>
     
     <!-- Shop Banner -->
-     <section class="relative pt-20 min-h-[260px] md:h-[45vh]">
-      <div class="absolute inset-0 bg-forest">
-       <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a3d2e 0%, #2a5442 100%);"></div>
-       <svg class="absolute right-0 bottom-0 w-64 h-64 opacity-10" viewbox="0 0 200 200"><circle cx="100" cy="100" r="80" stroke="white" stroke-width="1" fill="none" /> <circle cx="100" cy="100" r="60" stroke="white" stroke-width="1" fill="none" /> <circle cx="100" cy="100" r="40" stroke="white" stroke-width="1" fill="none" />
-       </svg>
-      </div>
-      <div class="relative z-10 h-full flex items-center">
-       <div class="max-w-7xl mx-auto px-6 w-full text-center">
-        <p class="text-orange font-semibold tracking-widest text-sm mb-4">MOTOTREK STORE</p>
-        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-4">EXPLORE OUR GEAR COLLECTION</h1>
-        <p class="text-gray-300 text-lg max-w-xl mx-auto">Engineered for safety. Designed for adventure.</p>
-       </div>
-      </div>
-     </section>
-     <section class="bg-white border-b sticky top-[72px] md:top-16 z-40">
-      <div class="max-w-7xl mx-auto px-6 py-4">
+      <section class="relative pt-24 min-h-[75vh] md:min-h-[85vh] overflow-hidden">
 
-        <!-- MAIN CATEGORY ROW -->
-        <div id="mainCategories" 
-            class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide whitespace-nowrap">
+        <img src="images/mt-images/shop-banner.webp"
+            alt="Mototrek Shop Banner"
+            class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative z-10 flex items-center h-full">
+          <div class="max-w-7xl mx-auto px-6 w-full text-center">
+            <p class="text-orange font-semibold tracking-widest text-sm mb-4">
+              MOTOTREK STORE
+            </p>
+
+            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-4">
+              EXPLORE OUR GEAR COLLECTION
+            </h1>
+
+            <p class="text-gray-300 text-lg max-w-xl mx-auto">
+              Engineered for safety. Designed for adventure.
+            </p>
+          </div>
         </div>
 
-        <!-- SUBCATEGORY ROW -->
-        <div id="subCategories" 
-            class="flex gap-3 mt-3 overflow-x-auto pb-1">
-        </div>
+      </section>
 
-      </div>
-    </section>
+      <section class="bg-white border-b sticky top-[72px] md:top-16 z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+
+          <div id="mainCategories"
+              class="flex gap-3 overflow-x-auto pb-2 whitespace-nowrap">
+          </div>
+
+          <div id="subCategories"
+              class="flex gap-3 mt-3 overflow-x-auto pb-1">
+          </div>
+
+        </div>
+      </section>
+
      <!-- Product Grid -->
      <section class="py-12 bg-offwhite">
       <div class="max-w-7xl mx-auto px-6">
