@@ -198,45 +198,48 @@
     <div class="scroll-container">
       
       <!-- Navigation -->
-        <nav class="bg-forest fixed w-full top-0 z-50 relative">
-
-          <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center">
-              <img src="images/mt-images/logo.webp"
-                  alt="Mototrek Logo"
-                  class="h-12 w-auto object-contain">
-            </a>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8">
-              <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a>
-              <a href="shop.html" class="nav-link text-white text-sm font-medium">SHOP</a>
-              <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a>
-              <a href="about.html" class="nav-link text-white text-sm font-medium">ABOUT</a>
-              <a href="contact.html" class="nav-link text-orange text-sm font-medium">CONTACT</a>
-            </div>
-
-            <!-- Mobile Button -->
-            <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
-              ☰
-            </button>
-
+      <nav class="bg-forest fixed w-full top-0 left-0 z-50">
+      
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center">
+            <img src="images/mt-images/logo.webp"
+                 alt="Mototrek Logo"
+                 class="h-12 w-auto object-contain">
+          </a>
+      
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a>
+            <a href="shop.html" class="nav-link text-white text-sm font-medium">SHOP</a>
+            <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a>
+            <a href="about.html" class="nav-link text-white text-sm font-medium">ABOUT</a>
+            <a href="contact.html" class="nav-link text-orange text-sm font-medium">CONTACT</a>
           </div>
-
-          <!-- Mobile Menu (OUTSIDE flex container) -->
-          <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
-            <div class="flex flex-col gap-4 text-white text-sm font-medium">
-              <a href="index.html">HOME</a>
-              <a href="shop.html">SHOP</a>
-              <a href="events.html">EVENTS</a>
-              <a href="about.html">ABOUT</a>
-              <a href="contact.html">CONTACT</a>
-            </div>
+      
+          <!-- Mobile Button -->
+          <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
+            ☰
+          </button>
+      
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+             class="hidden md:hidden absolute top-full left-0 w-full bg-forest px-6 pb-6 shadow-lg">
+      
+          <div class="flex flex-col gap-4 text-white text-sm font-medium">
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="events.html">EVENTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
           </div>
-
-        </nav>
+      
+        </div>
+      
+      </nav>
     
     <!-- Contact Banner -->
      <section class="relative pt-20 min-h-[250px] md:h-[40vh]">
@@ -570,6 +573,7 @@ function toggleMenu() {
 }
 </script>
 </html>
+
 
 
 
