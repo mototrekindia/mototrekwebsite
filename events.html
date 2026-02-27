@@ -236,20 +236,54 @@
     </nav>
     
     <!-- Trek Banner -->
-     <section class="relative pt-20 min-h-[300px] md:h-[55vh]">
-      <div class="absolute inset-0 bg-forest">
-       <div class="absolute inset-0 hero-gradient"></div>
-       <svg class="absolute inset-0 w-full h-full opacity-15" viewbox="0 0 200 100" preserveaspectratio="xMidYMid slice"><path d="M0 80 L30 50 L60 70 L100 30 L140 60 L170 40 L200 55 L200 100 L0 100 Z" fill="currentColor" /> <circle cx="170" cy="25" r="15" fill="#c45d2a" opacity="0.3" />
-       </svg>
-      </div>
-      <div class="relative z-10 h-full flex items-center">
-       <div class="max-w-7xl mx-auto px-6 w-full text-center">
-        <p class="text-orange font-semibold tracking-widest text-sm mb-4">ADVENTURE AWAITS</p>
-        <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-4">RIDE. TREK. REPEAT.</h1>
-        <p class="text-gray-300 text-lg max-w-xl mx-auto">Weekend adventures curated for explorers who seek the road less traveled.</p>
-       </div>
-      </div>
-     </section><!-- Upcoming Events -->
+     <section class="relative pt-20 min-h-[300px] md:h-[55vh] overflow-hidden">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+          <img src="images/mt-images/event-banner.webp"
+              alt="Mototrek Adventure Banner"
+              class="w-full h-full object-cover">
+        </div>
+
+        <!-- Forest Color Overlay -->
+        <div class="absolute inset-0 bg-forest/70"></div>
+
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 hero-gradient"></div>
+
+        <!-- Decorative SVG -->
+        <svg class="absolute inset-0 w-full h-full opacity-15"
+            viewBox="0 0 200 100"
+            preserveAspectRatio="xMidYMid slice">
+          <path d="M0 80 L30 50 L60 70 L100 30 L140 60 L170 40 L200 55 L200 100 L0 100 Z"
+                fill="currentColor" />
+          <circle cx="170" cy="25" r="15"
+                  fill="#c45d2a"
+                  opacity="0.3" />
+        </svg>
+
+        <!-- Content -->
+        <div class="relative z-10 h-full flex items-center">
+          <div class="max-w-7xl mx-auto px-6 w-full text-center">
+
+            <p class="text-orange font-semibold tracking-widest text-sm mb-4">
+              ADVENTURE AWAITS
+            </p>
+
+            <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-4">
+              RIDE. TREK. REPEAT.
+            </h1>
+
+            <p class="text-gray-300 text-lg max-w-xl mx-auto">
+              Weekend adventures curated for explorers who seek the road less traveled.
+            </p>
+
+          </div>
+        </div>
+
+      </section>
+     
+     <!-- Upcoming Events -->
      <section class="py-16 bg-offwhite">
       <div class="max-w-7xl mx-auto px-6">
        <div class="text-center mb-12">

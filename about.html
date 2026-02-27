@@ -235,22 +235,38 @@
     </nav>
     
     <!-- About Banner -->
-     <section class="relative pt-20 min-h-[300px] md:h-[50vh]">
-      <div class="absolute inset-0 bg-forest">
-       <div class="absolute inset-0" style="background: linear-gradient(180deg, #1a3d2e 0%, #0f251b 100%);"></div>
-       <svg class="absolute inset-0 w-full h-full opacity-10" viewbox="0 0 400 200" preserveaspectratio="xMidYMid slice"><path d="M0 150 Q100 80 200 120 Q300 160 400 100 L400 200 L0 200 Z" fill="white" /> <circle cx="350" cy="50" r="30" fill="#c45d2a" opacity="0.2" /> <circle cx="50" cy="80" r="20" fill="#c45d2a" opacity="0.15" />
-       </svg>
+     <section class="relative pt-20 min-h-[300px] md:h-[60vh] overflow-hidden">
+
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img src="images/mt-images/about-banner.webp" 
+            alt="Mototrek Banner"
+            class="w-full h-full object-cover">
       </div>
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Optional Gradient Blend (Brand Feel) -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70"></div>
+
+      <!-- Content -->
       <div class="relative z-10 h-full flex items-center">
-       <div class="max-w-7xl mx-auto px-6 w-full text-center">
-        <p class="text-orange font-semibold tracking-widest text-sm mb-4">OUR STORY</p>
-        <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-4">
-          BUILT BY RIDERS.<br>
-          DRIVEN BY ADVENTURE.
-        </h1>
+        <div class="max-w-7xl mx-auto px-6 w-full text-center">
+          
+          <p class="text-orange font-semibold tracking-widest text-sm mb-4">
+            OUR STORY
+          </p>
+
+          <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-4 leading-tight">
+            BUILT BY RIDERS.<br>
+            DRIVEN BY ADVENTURE.
+          </h1>
+
+        </div>
       </div>
-      </div>
-      </section>
+
+    </section>
 
       <!-- About Content -->
       <section class="py-8 bg-offwhite border-t border-gray-100">
