@@ -242,22 +242,20 @@
         </div>
 
         <!-- Mobile Button -->
-        <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
-          ☰
-        </button>
-        <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
-          ☰
-          <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
-          <div class="flex flex-col gap-4 text-white text-sm font-medium">
-            <a href="index.html">HOME</a>
-            <a href="shop.html">SHOP</a>
-            <a href="events.html">EVENTS</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
-          </div>
-        </div>
-</button>
-    </nav>
+     <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
+       ☰
+     </button>
+     
+     <!-- Mobile Menu -->
+     <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
+       <div class="flex flex-col gap-4 text-white text-sm font-medium">
+         <a href="index.html">HOME</a>
+         <a href="shop.html">SHOP</a>
+         <a href="events.html">EVENTS</a>
+         <a href="about.html">ABOUT</a>
+         <a href="contact.html">CONTACT</a>
+       </div>
+     </div>
     
     <!-- Shop Banner -->
      <section class="relative pt-20 min-h-[260px] md:h-[45vh]">
@@ -779,6 +777,7 @@ function toggleMenu() {
 }
 </script>
 </html>
+
 
 
 
