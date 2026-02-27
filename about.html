@@ -244,15 +244,16 @@
         </div>
 
         <!-- Mobile Button -->
-        <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
-          ☰
-        </button>
+          <button class="md:hidden text-white text-2xl ml-auto relative z-50"
+                  onclick="toggleMenu()">
+            ☰
+          </button>
 
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-forest px-6 pb-6 shadow-lg">
-        <div class="flex flex-col gap-4 text-white text-sm font-medium">
+      <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
+      <div class="flex flex-col items-end text-right gap-4 text-white text-sm font-medium">
           <a href="index.html">HOME</a>
           <a href="shop.html">SHOP</a>
           <a href="events.html">EVENTS</a>
@@ -263,38 +264,32 @@
     </nav>
     
     <!-- About Banner -->
-     <section class="relative pt-20 min-h-[300px] md:h-[60vh] overflow-hidden">
+      <section class="relative pt-20 min-h-[320px] md:h-[60vh] overflow-hidden">
 
-      <!-- Background Image -->
-      <div class="absolute inset-0">
-        <img src="images/mt-images/about-banner.webp" 
-            alt="Mototrek Banner"
-            class="w-full h-full object-cover">
-      </div>
-
-      <!-- Dark Overlay -->
-      <div class="absolute inset-0 bg-black/60"></div>
-
-      <!-- Optional Gradient Blend (Brand Feel) -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70"></div>
-
-      <!-- Content -->
-      <div class="relative z-10 h-full flex items-center">
-        <div class="max-w-7xl mx-auto px-6 w-full text-center">
-          
-          <p class="text-orange font-semibold tracking-widest text-sm mb-4">
-            OUR STORY
-          </p>
-
-          <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-4 leading-tight">
-            BUILT BY RIDERS.<br>
-            DRIVEN BY ADVENTURE.
-          </h1>
-
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+          <img src="images/mt-images/about-banner.webp" 
+              alt="Mototrek Banner"
+              class="w-full h-full object-cover">
         </div>
-      </div>
 
-    </section>
+        <!-- Content -->
+        <div class="relative z-10 h-full flex items-center">
+          <div class="max-w-7xl mx-auto px-6 w-full text-center">
+            
+            <p class="text-orange font-semibold tracking-widest text-sm mb-4">
+              OUR STORY
+            </p>
+
+            <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white drop-shadow-xl mb-4 leading-tight">
+              BUILT BY RIDERS.<br>
+              DRIVEN BY ADVENTURE.
+            </h1>
+
+          </div>
+        </div>
+
+      </section>
 
       <!-- About Content -->
       <section class="py-8 bg-offwhite border-t border-gray-100">

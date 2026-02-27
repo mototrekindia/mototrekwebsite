@@ -247,17 +247,16 @@
           </div>
       
           <!-- Mobile Button -->
-          <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
+          <button class="md:hidden text-white text-2xl ml-auto relative z-50"
+                  onclick="toggleMenu()">
             ☰
           </button>
       
         </div>
       
         <!-- Mobile Menu -->
-        <div id="mobileMenu"
-             class="hidden md:hidden absolute top-full left-0 w-full bg-forest px-6 pb-6 shadow-lg">
-      
-          <div class="flex flex-col gap-4 text-white text-sm font-medium">
+        <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
+        <div class="flex flex-col items-end text-right gap-4 text-white text-sm font-medium">
             <a href="index.html">HOME</a>
             <a href="shop.html">SHOP</a>
             <a href="events.html">EVENTS</a>
@@ -270,46 +269,32 @@
       </nav>
     
     <!-- Contact Banner -->
-     <section class="relative pt-20 min-h-[250px] md:h-[40vh] overflow-hidden">
+    <section class="relative pt-20 min-h-[280px] md:h-[50vh] overflow-hidden">
 
-          <!-- Background Image -->
-          <div class="absolute inset-0">
-            <img src="images/mt-images/contact-banner.webp"
-                alt="Contact Mototrek"
-                class="w-full h-full object-cover">
-          </div>
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img src="images/mt-images/contact-banner.webp"
+            alt="Contact Mototrek"
+            class="w-full h-full object-cover">
+      </div>
 
-          <!-- Dark Forest Overlay -->
-          <div class="absolute inset-0 bg-forest/75"></div>
+      <!-- Content -->
+      <div class="relative z-10 h-full flex items-center">
+        <div class="max-w-7xl mx-auto px-6 w-full text-center">
 
-          <!-- Gradient Overlay -->
-          <div class="absolute inset-0"
-              style="background: linear-gradient(135deg, rgba(26,61,46,0.85) 0%, rgba(15,37,27,0.9) 100%);">
-          </div>
+          <p class="text-orange font-semibold tracking-widest text-sm mb-4">
+            GET IN TOUCH
+          </p>
 
-          <!-- Subtle Grid Texture -->
-          <div class="absolute inset-0 opacity-10"
-              style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22 x=%220%22 y=%220%22 width=%2220%22 height=%2220%22/></svg>');
-                      background-size: 40px 40px;">
-          </div>
+          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white drop-shadow-xl">
+            LET'S CONNECT
+          </h1>
 
-          <!-- Content -->
-          <div class="relative z-10 h-full flex items-center">
-            <div class="max-w-7xl mx-auto px-6 w-full text-center">
+        </div>
+      </div>
 
-              <p class="text-orange font-semibold tracking-widest text-sm mb-4">
-                GET IN TOUCH
-              </p>
+    </section>
 
-              <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white">
-                LET'S CONNECT
-              </h1>
-
-            </div>
-          </div>
-
-        </section>
-     
      <!-- Contact Content -->
      <section class="py-16 bg-offwhite">
       <div class="max-w-6xl mx-auto px-6">

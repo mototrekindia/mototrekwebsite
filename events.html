@@ -247,9 +247,10 @@
         </div>
 
         <!-- Mobile Button -->
-        <button class="md:hidden text-white text-2xl" onclick="toggleMenu()">
-          ☰
-        </button>
+          <button class="md:hidden text-white text-2xl ml-auto relative z-50"
+                  onclick="toggleMenu()">
+            ☰
+          </button>
 
         <!-- Mobile Menu -->
           <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
@@ -264,7 +265,7 @@
     </nav>
     
     <!-- Trek Banner -->
-     <section class="relative pt-20 min-h-[300px] md:h-[55vh] overflow-hidden">
+      <section class="relative pt-20 min-h-[320px] md:h-[65vh] overflow-hidden">
 
         <!-- Background Image -->
         <div class="absolute inset-0">
@@ -273,14 +274,8 @@
               class="w-full h-full object-cover">
         </div>
 
-        <!-- Forest Color Overlay -->
-        <div class="absolute inset-0 bg-forest/70"></div>
-
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 hero-gradient"></div>
-
         <!-- Decorative SVG -->
-        <svg class="absolute inset-0 w-full h-full opacity-15"
+        <svg class="absolute inset-0 w-full h-full opacity-15 pointer-events-none"
             viewBox="0 0 200 100"
             preserveAspectRatio="xMidYMid slice">
           <path d="M0 80 L30 50 L60 70 L100 30 L140 60 L170 40 L200 55 L200 100 L0 100 Z"
@@ -298,11 +293,11 @@
               ADVENTURE AWAITS
             </p>
 
-            <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-4">
+            <h1 class="font-display text-4xl sm:text-5xl md:text-7xl text-white drop-shadow-xl mb-4">
               RIDE. TREK. REPEAT.
             </h1>
 
-            <p class="text-gray-300 text-lg max-w-xl mx-auto">
+            <p class="text-white/90 text-lg max-w-xl mx-auto drop-shadow-md">
               Weekend adventures curated for explorers who seek the road less traveled.
             </p>
 
