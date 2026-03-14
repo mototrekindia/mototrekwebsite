@@ -1,0 +1,351 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mototrek Guides | Trek & Ride Knowledge Hub</title>
+
+<meta name="description" content="Beginner trekking guides, packing checklists, riding advice and outdoor knowledge from the Mototrek adventure community.">
+
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--forest-green:#1a3d2e;
+--burnt-orange:#c45d2a;
+--off-white:#f8f6f3;
+--charcoal:#2d2d2d;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--off-white);
+color:var(--charcoal);
+}
+
+.font-display{
+font-family:'Bebas Neue',sans-serif;
+letter-spacing:.05em;
+}
+
+.bg-forest{background:var(--forest-green);}
+.text-orange{color:var(--burnt-orange);}
+
+.guide-card{
+background:white;
+border:1px solid rgba(0,0,0,.05);
+padding:32px;
+border-radius:10px;
+transition:.3s;
+}
+
+.guide-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 30px rgba(0,0,0,.08);
+}
+
+.guide-card ul li a:hover{
+color:var(--burnt-orange);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="bg-forest fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="images/mt-images/logo.webp"
+             alt="Mototrek Logo"
+             class="h-12 w-auto object-contain">
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="nav-link text-white text-sm font-medium">HOME</a>
+      <a href="shop.html" class="nav-link text-white text-sm font-medium">SHOP</a>
+      <a href="events.html" class="nav-link text-white text-sm font-medium">EVENTS</a>
+      <a href="guides.html" class="nav-link text-orange text-sm font-medium">GUIDES</a>
+      <a href="about.html" class="nav-link text-white text-sm font-medium">ABOUT</a>
+      <a href="contact.html" class="nav-link text-white text-sm font-medium">CONTACT</a>
+    </div>
+
+    <!-- Mobile Button -->
+    <button class="md:hidden text-white text-2xl ml-auto relative z-50"
+            onclick="toggleMenu()">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-forest px-6 pb-6">
+    <div class="flex flex-col gap-4 text-white text-sm font-medium">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="events.html">EVENTS</a>
+      <a href="guides.html">GUIDES</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="pt-24 pb-16 bg-forest text-center text-white">
+
+<p class="text-orange font-semibold tracking-widest text-sm mb-3">
+KNOWLEDGE HUB
+</p>
+
+<h1 class="font-display text-6xl mb-4">
+TREK & RIDE GUIDES
+</h1>
+
+<p class="max-w-xl mx-auto text-gray-300">
+Learn how to trek smarter, ride safer, pack better and explore the outdoors with confidence.
+</p>
+
+</section>
+
+<section class="py-20">
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- BEGINNER TREKKING -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Beginner Trekking
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/beginners-guide-to-trekking.html">Beginner’s Guide to Trekking</a></li>
+
+<li><a href="guides/how-to-choose-first-trek.html">How to Choose Your First Trek</a></li>
+
+<li><a href="guides/fitness-required-for-trekking.html">How Fit Do You Need to Be for Trekking</a></li>
+
+<li><a href="guides/what-to-expect-first-trek.html">What to Expect on Your First Trek</a></li>
+
+</ul>
+
+</div>
+
+<!-- TREK PREPARATION -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Trek Preparation
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/how-to-train-for-trek.html">How to Train for a Trek</a></li>
+
+<li><a href="guides/build-trek-stamina.html">How to Build Trek Stamina</a></li>
+
+<li><a href="guides/what-to-eat-before-trek.html">What to Eat Before a Trek</a></li>
+
+<li><a href="guides/mental-preparation-for-trek.html">Mental Preparation for Trekking</a></li>
+
+</ul>
+
+</div>
+
+<!-- TREK PACKING -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Trek Packing Guides
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/first-trek-checklist.html">First Trek Checklist</a></li>
+
+<li><a href="guides/trek-packing-checklist.html">Trek Packing Checklist</a></li>
+
+<li><a href="guides/what-to-carry-trek-backpack.html">What to Carry in a Trek Backpack</a></li>
+
+<li><a href="guides/how-to-pack-backpack.html">How to Pack Your Backpack Properly</a></li>
+
+</ul>
+
+</div>
+
+<!-- TREK GEAR -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Trek Gear
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/trek-shoes-vs-normal-shoes.html">Trek Shoes vs Normal Shoes</a></li>
+
+<li><a href="guides/how-to-choose-trekking-shoes.html">How to Choose Trekking Shoes</a></li>
+
+<li><a href="guides/how-to-choose-trek-backpack.html">How to Choose a Trek Backpack</a></li>
+
+<li><a href="guides/trekking-poles-guide.html">Trekking Poles Guide</a></li>
+
+</ul>
+
+</div>
+
+<!-- TREK SAFETY -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Trek Safety
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/trekking-safety-basics.html">Trekking Safety Basics</a></li>
+
+<li><a href="guides/injury-on-trek.html">What to Do If Someone Gets Injured on Trek</a></li>
+
+<li><a href="guides/weather-safety-trekking.html">Weather Safety During Treks</a></li>
+
+<li><a href="guides/avoid-trek-fatigue.html">Avoiding Trek Fatigue</a></li>
+
+</ul>
+
+</div>
+
+<!-- TREKKING SKILLS -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Trekking Skills
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/how-to-walk-on-trek.html">How to Walk Efficiently on a Trek</a></li>
+
+<li><a href="guides/how-to-descend-steep-trails.html">How to Descend Steep Trails Safely</a></li>
+
+<li><a href="guides/cross-streams-safely.html">How to Cross Streams Safely</a></li>
+
+<li><a href="guides/handle-fear-of-heights.html">How to Handle Fear of Heights</a></li>
+
+</ul>
+
+</div>
+
+<!-- RIDING GUIDES -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Riding Guides
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/beginner-long-bike-ride.html">Beginner’s Guide to Long Bike Rides</a></li>
+
+<li><a href="guides/pre-ride-motorcycle-checklist.html">Pre-Ride Motorcycle Checklist</a></li>
+
+<li><a href="guides/how-to-pack-motorcycle-trip.html">How to Pack for a Motorcycle Trip</a></li>
+
+<li><a href="guides/group-riding-etiquette.html">Group Riding Etiquette</a></li>
+
+</ul>
+
+</div>
+
+<!-- TREK EXPERIENCE -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Trek Experience
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/why-trekkers-wake-up-4am.html">Why Trekkers Wake Up at 4 AM</a></li>
+
+<li><a href="guides/trek-vs-picnic.html">Trek vs Picnic</a></li>
+
+<li><a href="guides/why-trekking-changes-your-mind.html">Why Trekking Changes Your Mind</a></li>
+
+<li><a href="guides/what-mountains-teach-you.html">What Mountains Teach You</a></li>
+
+</ul>
+
+</div>
+
+<!-- TREK TYPES -->
+
+<div class="guide-card">
+
+<h3 class="font-display text-2xl mb-4 text-[#1a3d2e]">
+Types of Treks
+</h3>
+
+<ul class="space-y-2 text-gray-600">
+
+<li><a href="guides/sunrise-treks-guide.html">Sunrise Treks Guide</a></li>
+
+<li><a href="guides/night-treks-guide.html">Night Treks Guide</a></li>
+
+<li><a href="guides/forest-treks-guide.html">Forest Treks Guide</a></li>
+
+<li><a href="guides/waterfall-treks-guide.html">Waterfall Treks Guide</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bg-[#c45d2a] py-16 text-center text-white">
+
+<h2 class="font-display text-4xl mb-4">
+READY FOR YOUR NEXT ADVENTURE?
+</h2>
+
+<p class="mb-6">
+Explore the mountains with experienced trek leaders from the Mototrek community.
+</p>
+
+<a href="events.html" class="bg-white text-[#c45d2a] px-8 py-3 font-semibold">
+VIEW UPCOMING TREKS
+</a>
+
+</section>
+
+</body>
+</html>
