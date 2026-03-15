@@ -23,7 +23,7 @@
 
 <link rel="canonical" href="https://mototrek.in/guides/beginners-guide-to-trekking.html">
 
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -439,14 +439,10 @@ VIEW UPCOMING TREKS
      </footer>
 
      <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuBtn = document.getElementById("mobile-menu-button");
-        const menu = document.getElementById("mobile-menu");
-
-        menuBtn.addEventListener("click", function () {
-          menu.classList.toggle("hidden");
-        });
-      });
+      function toggleMenu(){
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+      }
       </script>
 
 </body>
