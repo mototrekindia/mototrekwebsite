@@ -736,11 +736,12 @@ if (selectedCategory === "all") {
               ₹${product.price}
             </span>
 
-            <a href="${product.billbookLink}" 
-            class="text-orange font-semibold text-sm hover:underline"
-            ${!product.billbookLink || product.billbookLink === '' ? 'style="pointer-events:none;opacity:0.4;"' : ''}>
-            BUY NOW →
-          </a>
+            <a href="${product.billbookLink}"
+              onclick="fbq('track','InitiateCheckout');"
+              class="text-orange font-semibold text-sm hover:underline"
+              ${!product.billbookLink || product.billbookLink === '' ? 'style="pointer-events:none;opacity:0.4;"' : ''}>
+              BUY NOW →
+              </a>
           </div>
         </div>
 
