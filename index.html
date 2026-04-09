@@ -243,7 +243,10 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
       align-items: center;
       justify-content: center;
     }
-  
+    html, body {
+    overflow-x: hidden;
+  }
+
   </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
@@ -313,7 +316,8 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
         <div class="max-w-7xl mx-auto px-6 w-full">
           <div class="max-w-2xl">
     
-            <p class="text-orange font-semibold tracking-widest text-sm mb-4">
+            <p
+            class="text-orange font-semibold tracking-widest text-sm mb-4">
               ADVENTURE AWAITS
             </p>
     
@@ -329,7 +333,8 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
             </p>
     
             <!-- Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div 
+            class="flex flex-col sm:flex-row gap-4">
 
               <a href="shop.html"
                 onclick="fbq('track','ViewContent');"
@@ -395,7 +400,8 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
         <h2 class="font-display text-4xl md:text-5xl text-forest">FEATURED CATEGORIES</h2>
        </div>
        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><!-- Category 1 -->
-        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg" onclick="window.location.href='shop.html?category=HELMETS'">
+        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg"
+          onclick="window.location.href='shop.html?category=HELMETS'">
          <div class="absolute inset-0 category-img">
           <img src="images/product-images/mt_product_1.webp"
               class="w-full h-full object-cover">
@@ -405,7 +411,8 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
           <p class="text-gray-300 text-sm">Full face, flip-up, off-road and open face helmets.</p>
          </div>
         </div><!-- Category 2 -->
-        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg" onclick="window.location.href='shop.html?category=RIDING GEAR'">
+        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg"
+         onclick="window.location.href='shop.html?category=RIDING GEAR'">
          <div class="absolute inset-0 category-img">
           <img src="images/product-images/mt_product_70.webp"
               class="w-full h-full object-cover">
@@ -415,7 +422,8 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
           <p class="text-gray-300 text-sm">Jackets, pants, gloves and protective essentials.</p>
          </div>
         </div><!-- Category 3 -->
-        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg" onclick="window.location.href='shop.html?category=BAGS'">
+        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg"
+         onclick="window.location.href='shop.html?category=BAGS'">
          <div class="absolute inset-0 category-img">
           <img src="images/product-images/mt_product_115.webp"
               class="w-full h-full object-cover">
@@ -426,7 +434,8 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
          </div>
         </div>
         <!-- Category 4 -->
-        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg" onclick="window.location.href='shop.html?category=BIKE ACCESSORIES'">
+        <div class="category-card h-64 sm:h-72 md:h-80 rounded-lg"
+         onclick="window.location.href='shop.html?category=BIKE ACCESSORIES'">
          <div class="absolute inset-0 category-img">
           <img src="images/product-images/mt_product_140.webp"
               class="w-full h-full object-cover">
@@ -452,33 +461,54 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
         class="btn-secondary border-white text-white hover:bg-white hover:text-orange inline-block text-center">
         SHOP NOW
       </a>
-     </section><!-- Community Section -->
-     <section class="py-20 bg-offwhite">
-      <div class="max-w-7xl mx-auto px-6">
-       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="relative">
-         <div class="aspect-video rounded-lg overflow-hidden">
-          <img src="images/mt-images/mt-trekwithcommunity.webp"
-              class="w-full h-full object-cover">
-        </div>
-         <div class="absolute -bottom-4 -right-4 bg-orange text-white p-6 rounded-lg">
-          <p class="font-display text-3xl">4000+</p>
-          <p class="text-sm">ACTIVE RIDERS</p>
-         </div>
-        </div>
-        <div>
-         <p class="text-orange font-semibold tracking-widest text-sm mb-3">JOIN THE TRIBE</p>
-         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-forest mb-6">RIDE WITH THE COMMUNITY</h2>
-         <p class="text-gray-600 leading-relaxed mb-8">
-          Mototrek is more than just a store. We are a community of riders and trekkers. Join our weekend rides, explore new trails, and gear up with products trusted by our own members.
-          </p>
-         <a href="events.html"
-          onclick="fbq('track','ViewContent');"
-          class="btn-primary">
-          EXPLORE EVENTS
-        </a>
-        </div>
-       </div>
+     </section>
+     <!-- Community Section -->
+        <section class="py-20 bg-offwhite">
+          <div class="max-w-7xl mx-auto px-6">
+          <section class="py-20 bg-offwhite">
+          <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+              <!-- LEFT IMAGE BLOCK -->
+              <div class="relative">
+                <div class="aspect-video rounded-lg overflow-hidden">
+                  <img src="images/mt-images/mt-trekwithcommunity.webp"
+                      class="w-full h-full object-cover">
+                </div>
+
+                <div class="absolute -bottom-4 -right-4 bg-orange text-white p-6 rounded-lg">
+                  <p class="font-display text-3xl">4000+</p>
+                  <p class="text-sm">ACTIVE RIDERS</p>
+                </div>
+              </div>
+
+              <!-- RIGHT CONTENT -->
+              <div>
+                <p class="text-orange font-semibold tracking-widest text-sm mb-3">
+                  JOIN THE TRIBE
+                </p>
+
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-forest mb-6">
+                  RIDE WITH THE COMMUNITY
+                </h2>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                  Mototrek is more than just a store. We are a community of riders and trekkers.
+                  Join our weekend rides, explore new trails, and gear up with products trusted by our own members.
+                </p>
+
+                <a href="events.html"
+                  onclick="fbq('track','ViewContent');"
+                  class="btn-primary">
+                  EXPLORE EVENTS
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
       </div>
      
     </section>
@@ -684,6 +714,132 @@ function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 }
 </script>
+
+<!-- GSAP CORE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- GSAP ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ================= HERO ================= */
+const heroTl = gsap.timeline();
+
+heroTl
+.from("#hero-headline", {
+  y: 80,
+  duration: 1,
+  ease: "power3.out"
+})
+.from("#hero-subtext", {
+  y: 40,
+  duration: 0.8,
+  ease: "power3.out"
+}, "-=0.5")
+.from(".btn-primary, .btn-secondary", {
+  y: 20,
+  duration: 0.6,
+  stagger: 0.2,
+  ease: "power2.out",
+  clearProps: "transform"
+}, "-=0.4");
+
+
+/* ================= CATEGORY CARDS ================= */
+gsap.utils.toArray(".category-card").forEach((card, i) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%",
+    },
+    y: 60,
+    duration: 0.8,
+    delay: i * 0.1,
+    ease: "power3.out"
+  });
+});
+
+
+/* ================= COMMUNITY ================= */
+gsap.from("section:last-of-type .relative", {
+  scrollTrigger: {
+    trigger: "section:last-of-type",
+    start: "top 80%",
+  },
+  x: -60,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from("section:last-of-type h2, section:last-of-type p, section:last-of-type .btn-primary", {
+  scrollTrigger: {
+    trigger: "section:last-of-type",
+    start: "top 80%",
+  },
+  x: 60,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power3.out"
+});
+
+
+/* ================= HEADINGS ================= */
+gsap.utils.toArray("section h2").forEach((heading) => {
+  gsap.from(heading, {
+    scrollTrigger: {
+      trigger: heading,
+      start: "top 90%",
+    },
+    y: 30,
+    duration: 0.6,
+    ease: "power2.out"
+  });
+});
+
+
+/* ================= ORANGE STRIP ================= */
+gsap.from(".bg-orange", {
+  y: 20,
+  duration: 0.8,
+  ease: "power2.out",
+  clearProps: "transform"
+});
+
+
+/* ================= NAVBAR ================= */
+gsap.from("nav", {
+  y: -60,
+  duration: 0.8,
+  ease: "power3.out"
+});
+
+/* ================= INFO SECTION CLEAN ================= */
+
+gsap.from("section.bg-white .max-w-7xl", {
+  scrollTrigger: {
+    trigger: "section.bg-white",
+    start: "top 85%",
+  },
+  y: 30,
+  duration: 0.8,
+  ease: "power2.out"
+});
+
+gsap.from(".text-center p", {
+  scrollTrigger: {
+    trigger: ".text-center",
+    start: "top 90%",
+  },
+  y: 20,
+  duration: 0.5,
+  ease: "power2.out"
+});
+
+</script>
+
+</body>
 </html>
 
 

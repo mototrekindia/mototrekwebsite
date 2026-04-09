@@ -750,6 +750,9 @@ if (selectedCategory === "all") {
   });
 
   renderPagination(totalPages);
+  setTimeout(() => {
+  animateProducts();
+}, 50);
 }
 
 function renderPagination(totalPages) {
@@ -826,6 +829,61 @@ function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 }
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ================= HERO ================= */
+gsap.from("section:first-of-type h1", {
+  y: 40,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from("section:first-of-type p", {
+  y: 20,
+  duration: 0.8,
+  delay: 0.2,
+  ease: "power2.out"
+});
+
+
+/* ================= CATEGORY BAR ================= */
+gsap.from("#mainCategories button", {
+  scrollTrigger: {
+    trigger: "#mainCategories",
+    start: "top 90%",
+  },
+  y: 20,
+  duration: 0.5,
+  stagger: 0.05,
+  ease: "power2.out"
+});
+
+
+/* ================= PRODUCT CARDS ================= */
+
+function animateProducts() {
+  gsap.from(".product-card", {
+    y: 40,
+    duration: 0.6,
+    stagger: 0.08,
+    ease: "power2.out",
+    clearProps: "transform"
+  });
+}
+
+
+/* ================= INITIAL RUN ================= */
+window.addEventListener("load", () => {
+  animateProducts();
+});
+</script>
+
+</body>
 </html>
 
 

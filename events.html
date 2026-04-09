@@ -858,6 +858,82 @@ function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 }
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ================= HERO ================= */
+gsap.from("section:first-of-type h1", {
+  y: 40,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from("section:first-of-type p", {
+  y: 20,
+  duration: 0.8,
+  delay: 0.2,
+  ease: "power2.out"
+});
+
+
+/* ================= TREK CARDS ================= */
+gsap.utils.toArray(".trek-card").forEach((card, i) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%",
+    },
+    y: 40,
+    duration: 0.6,
+    delay: i * 0.05,
+    ease: "power2.out",
+    clearProps: "transform"
+  });
+});
+
+
+/* ================= SECTION HEADINGS ================= */
+gsap.utils.toArray("section h2").forEach((heading) => {
+  gsap.from(heading, {
+    scrollTrigger: {
+      trigger: heading,
+      start: "top 90%",
+    },
+    y: 25,
+    duration: 0.6,
+    ease: "power2.out"
+  });
+});
+
+
+/* ================= WHY SECTION CARDS ================= */
+gsap.utils.toArray(".feature-icon").forEach((icon, i) => {
+  gsap.from(icon.parentElement, {
+    scrollTrigger: {
+      trigger: icon.parentElement,
+      start: "top 85%",
+    },
+    y: 30,
+    duration: 0.6,
+    delay: i * 0.1,
+    ease: "power2.out"
+  });
+});
+
+
+/* ================= NAVBAR ================= */
+gsap.from("nav", {
+  y: -50,
+  duration: 0.8,
+  ease: "power3.out"
+});
+</script>
+
+</body>
 </html>
 
 

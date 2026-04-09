@@ -244,7 +244,8 @@ src="https://www.facebook.com/tr?id=1599348158055903&ev=PageView&noscript=1"
   
    <!-- Navigation -->
     <nav class="bg-forest fixed w-full top-0 z-50">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <div class="flex items-center">
           <a href="index.html">
@@ -588,6 +589,117 @@ function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 }
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ================= HERO ================= */
+gsap.from("section:first-of-type h1", {
+  y: 50,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from("section:first-of-type p", {
+  y: 25,
+  duration: 0.8,
+  delay: 0.2,
+  ease: "power2.out"
+});
+
+
+/* ================= STORY TEXT ================= */
+gsap.from("section.bg-offwhite .text-center", {
+  scrollTrigger: {
+    trigger: "section.bg-offwhite",
+    start: "top 85%",
+  },
+  y: 30,
+  duration: 0.8,
+  ease: "power2.out"
+});
+
+
+/* ================= MISSION / VISION ================= */
+gsap.from("section.bg-offwhite .grid.md\\:grid-cols-2 > div", {
+  scrollTrigger: {
+    trigger: "section.bg-offwhite .grid",
+    start: "top 85%",
+  },
+  y: 40,
+  duration: 0.7,
+  stagger: 0.2,
+  ease: "power2.out",
+  clearProps: "transform"
+});
+
+
+/* ================= COMMUNITY STATS ================= */
+gsap.from("section.bg-forest .grid > div", {
+  scrollTrigger: {
+    trigger: "section.bg-forest",
+    start: "top 85%",
+  },
+  y: 25,
+  duration: 0.6,
+  stagger: 0.15,
+  ease: "power2.out"
+});
+
+
+/* ================= FOUNDER SECTION ================= */
+gsap.from("section.bg-white img", {
+  scrollTrigger: {
+    trigger: "section.bg-white",
+    start: "top 80%",
+  },
+  x: -40,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from("section.bg-white h2, section.bg-white p", {
+  scrollTrigger: {
+    trigger: "section.bg-white",
+    start: "top 80%",
+  },
+  x: 40,
+  duration: 1,
+  stagger: 0.15,
+  ease: "power3.out"
+});
+
+
+/* ================= VALUES ================= */
+gsap.from("section.bg-offwhite:last-of-type .grid > div", {
+  scrollTrigger: {
+    trigger: "section.bg-offwhite:last-of-type",
+    start: "top 85%",
+  },
+  y: 30,
+  duration: 0.6,
+  stagger: {
+    each: 0.08,
+    grid: "auto",
+    from: "start"
+  },
+  ease: "power2.out",
+  clearProps: "transform"
+});
+
+
+/* ================= NAVBAR ================= */
+gsap.from("nav", {
+  y: -60,
+  duration: 0.8,
+  ease: "power3.out"
+});
+</script>
+
+</body>
 </html>
 
 
