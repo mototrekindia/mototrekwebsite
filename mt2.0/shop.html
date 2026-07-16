@@ -643,7 +643,7 @@ fbq('track', 'PageView');
 
                 <div>
 
-                    <p class="uppercase tracking-[0.30em] text-xs text-[#c45d2a] font-semibold mb-4">
+                    <p class="uppercase tracking-[0.30em] text-xs text-[#c45d2a] font-semibold mb-3">
                         WHY SHOP WITH MOTOTREK
                     </p>
 
@@ -730,11 +730,11 @@ fbq('track', 'PageView');
 
         <div class="text-center mb-14">
 
-            <p class="uppercase tracking-[0.30em] text-xs text-[#c45d2a] font-semibold mb-4">
+            <p class="uppercase tracking-[0.30em] text-xs text-[#c45d2a] font-semibold mb-3">
                 TRUSTED RIDING GEAR BRANDS
             </p>
 
-            <h2 class="serif text-4xl font-bold text-[#18382a] mb-4">
+            <h2 class="serif text-4xl font-bold text-[#18382a] mb-3">
                 Genuine Products From Brands Riders Trust
             </h2>
 
@@ -790,7 +790,7 @@ fbq('track', 'PageView');
 
         <div class="mt-14 rounded-2xl bg-[#18382a] p-8 lg:p-10 text-center text-white">
 
-            <h3 class="serif text-3xl mb-4">
+            <h3 class="serif text-3xl mb-3">
                 Looking for a Specific Brand or Product?
             </h3>
 
@@ -817,7 +817,7 @@ fbq('track', 'PageView');
 
         <div class="text-center text-white mb-16">
 
-            <p class="uppercase tracking-[0.30em] text-xs text-[#d8b48a] font-semibold mb-4">
+            <p class="uppercase tracking-[0.30em] text-xs text-[#d8b48a] font-semibold mb-3">
                 THE MOTOTREK DIFFERENCE
             </p>
 
@@ -938,7 +938,7 @@ fbq('track', 'PageView');
 
                 <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
 
-                    <i data-lucide="helmet" class="w-8 h-8 text-[#d8b48a] mx-auto mb-4"></i>
+                    <i data-lucide="helmet" class="w-8 h-8 text-[#d8b48a] mx-auto mb-3"></i>
 
                     <h3 class="font-semibold mb-2">
                         Try Before You Buy
@@ -952,7 +952,7 @@ fbq('track', 'PageView');
 
                 <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
 
-                    <i data-lucide="scale" class="w-8 h-8 text-[#d8b48a] mx-auto mb-4"></i>
+                    <i data-lucide="scale" class="w-8 h-8 text-[#d8b48a] mx-auto mb-3"></i>
 
                     <h3 class="font-semibold mb-2">
                         Compare Brands
@@ -966,7 +966,7 @@ fbq('track', 'PageView');
 
                 <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
 
-                    <i data-lucide="route" class="w-8 h-8 text-[#d8b48a] mx-auto mb-4"></i>
+                    <i data-lucide="route" class="w-8 h-8 text-[#d8b48a] mx-auto mb-3"></i>
 
                     <h3 class="font-semibold mb-2">
                         Gear for Every Ride
@@ -980,7 +980,7 @@ fbq('track', 'PageView');
 
                 <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
 
-                    <i data-lucide="heart-handshake" class="w-8 h-8 text-[#d8b48a] mx-auto mb-4"></i>
+                    <i data-lucide="heart-handshake" class="w-8 h-8 text-[#d8b48a] mx-auto mb-3"></i>
 
                     <h3 class="font-semibold mb-2">
                         Rider-First Advice
@@ -1279,7 +1279,7 @@ lucide.createIcons();
 
 <button
 id="enquiryBtn"
-class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 bg-[#18382a] text-white px-5 py-3 rounded-full shadow-xl z-50">
+class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 bg-[#18382a] text-white px-5 py-3 rounded-full shadow-xl z-[9998] hover:bg-[#c45d2a] transition">
 
 📋 My Enquiry (<span id="enquiryCount">0</span>)
 
@@ -1290,55 +1290,89 @@ class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 bg-[#18382a] text-white px
 <div
 id="enquiryModal"
 style="display:none"
-class="fixed inset-0 bg-black/60 z-[9999] flex items-center justify-center p-4">
+class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 px-4 py-6 overflow-y-auto">
 
-<div class="bg-white max-w-lg w-full p-6">
+<div
+class="
+relative
+bg-white
+w-full
+max-w-[560px]
+max-h-[90vh]
+mx-auto
+rounded-3xl
+flex
+flex-col
+overflow-hidden
+shadow-2xl
+">
 
-<h3 class="text-2xl mb-4">
-Your Enquiry
-</h3>
+<div class="flex items-center justify-between px-6 py-5 border-b">
 
-<div id="selectedProductsList" class="mb-6"></div>
+    <h3 class="text-2xl font-bold">
+        Your Enquiry
+    </h3>
 
-<input
-id="customerName"
-type="text"
-placeholder="Your Name"
-class="w-full border p-3 mb-3">
+    <button
+        id="closeEnquiryTop"
+        class="w-10 h-10 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-black transition">
 
-<input
-id="customerMobile"
-type="tel"
-placeholder="Mobile Number"
-class="w-full border p-3 mb-3">
+        &times;
 
-<input
-id="customerCity"
-type="text"
-placeholder="City"
-class="w-full border p-3 mb-4">
-
-<div class="flex gap-3">
-
-<button
-id="sendWhatsapp"
-class="flex-1 bg-[#18382a] text-white py-3">
-
-Send Request
-
-</button>
-
-<button
-id="closeEnquiry"
-class="px-5 border">
-
-Close
-
-</button>
+    </button>
 
 </div>
 
+<div
+id="selectedProductsList"
+class="
+flex-1
+overflow-y-auto
+px-6
+py-5
+space-y-3
+">
 </div>
+
+<div class="border-t bg-white px-6 py-5 sm:px-8 sm:py-6">
+
+    <input
+        id="customerName"
+        type="text"
+        placeholder="Your Name"
+        class="w-full rounded-xl border border-gray-200 px-4 py-3 text-base mb-4 focus:border-[#18382a] focus:ring-2 focus:ring-[#18382a]/10 outline-none transition">
+
+    <input
+        id="customerMobile"
+        type="tel"
+        placeholder="Mobile Number"
+        class="w-full rounded-xl border border-gray-200 px-4 py-3 text-base mb-4 focus:border-[#18382a] focus:ring-2 focus:ring-[#18382a]/10 outline-none transition">
+
+    <input
+        id="customerCity"
+        type="text"
+        placeholder="City"
+        class="w-full rounded-xl border border-gray-200 px-4 py-3 text-base mb-4 focus:border-[#18382a] focus:ring-2 focus:ring-[#18382a]/10 outline-none transition">
+
+    <div class="flex flex-col sm:flex-row gap-4 mt-2">
+
+        <button
+            id="sendWhatsapp"
+            class="flex-1 h-12 sm:h-14 rounded-xl bg-[#18382a] text-white font-semibold hover:bg-[#c45d2a] transition">
+
+            Send WhatsApp Enquiry
+
+        </button>
+
+        <button
+            id="closeEnquiry"
+            class="h-12 sm:h-14 sm:w-auto px-8 rounded-xl border border-gray-300 font-medium hover:bg-gray-100 transition">
+
+            Close
+
+        </button>
+
+    </div>
 
 </div>
 
@@ -1389,14 +1423,14 @@ class="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] p-4">
         </p>
 
         <a
+            <button
             id="productWhatsapp"
-            href="#"
-            target="_blank"
-            class="block text-center bg-[#25D366] text-white py-3 rounded-xl font-semibold">
+            type="button"
+            class="w-full bg-[#18382a] text-white py-3 rounded-xl font-semibold hover:bg-[#c45d2a] transition">
 
-            Enquire on WhatsApp
+            Add to My Enquiry
 
-        </a>
+            </button>
 
     </div>
 

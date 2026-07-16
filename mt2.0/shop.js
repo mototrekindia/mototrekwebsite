@@ -15,6 +15,24 @@ const productsPerPage = 12;
 
 let filteredProducts = [...window.products];
 
+let enquiryBucket = [];
+
+const enquiryBtn = document.getElementById("enquiryBtn");
+const enquiryModal = document.getElementById("enquiryModal");
+const enquiryCount = document.getElementById("enquiryCount");
+const selectedProductsList = document.getElementById("selectedProductsList");
+
+const customerName = document.getElementById("customerName");
+const customerMobile = document.getElementById("customerMobile");
+const customerCity = document.getElementById("customerCity");
+
+const sendWhatsapp = document.getElementById("sendWhatsapp");
+const closeEnquiry = 
+document.getElementById("closeEnquiry");
+
+const closeEnquiryTop =
+document.getElementById("closeEnquiryTop");
+
 
 /* ==========================================================
    Product Card
@@ -67,16 +85,13 @@ View Details
 
 </button>
 
-<a
-href="https://wa.me/919511901753?text=${encodeURIComponent(
-`Hi MotoTrek, I'm interested in ${product.name}`
-)}"
-target="_blank"
-class="rounded-xl bg-[#c45d2a] text-white py-3 text-center font-semibold">
+<button
+class="add-enquiry rounded-xl bg-[#c45d2a] text-white py-3 font-semibold transition"
+data-id="${product.id}">
 
-Enquire
+${enquiryBucket.find(item => item.id === product.id) ? "✓ Added" : "Add to Enquiry"}
 
-</a>
+</button>
 
 </div>
 
@@ -112,6 +127,7 @@ function renderProducts(reset = true) {
     lucide.createIcons();
 
     attachQuickView();
+    attachEnquiryButtons();
 
     if (countEl) {
 
@@ -412,6 +428,8 @@ document.getElementById("productWhatsapp").href =
         "Hi MotoTrek, I'm interested in " + product.name
     );
 
+window.currentProduct = product;
+
 document.getElementById("productModal").style.display = "flex";
 
         };
@@ -532,6 +550,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     refreshProducts();
 
+    updateEnquiryUI();
+
 });
 
 
@@ -574,6 +594,290 @@ function applySearch() {
     updateCounter();
 
     updateLoadMore();
+
+}
+
+/* ==========================================================
+   Enquiry Bucket
+========================================================== */
+
+function attachEnquiryButtons() {
+
+    document.querySelectorAll(".add-enquiry").forEach(button => {
+
+        button.onclick = function () {
+
+            const id = Number(this.dataset.id);
+
+            const product = window.products.find(p => p.id === id);
+
+            if (!product) return;
+
+            const existing =
+                enquiryBucket.findIndex(item => item.id === id);
+
+            if (existing >= 0) {
+
+                enquiryBucket.splice(existing, 1);
+
+            } else {
+
+                enquiryBucket.push(product);
+
+            }
+
+            updateEnquiryUI();
+
+            renderProducts(false);
+
+        };
+
+    });
+
+}
+
+function updateEnquiryUI() {
+
+    enquiryCount.innerText = enquiryBucket.length;
+
+    enquiryBtn.style.display =
+        enquiryBucket.length ? "flex" : "none";
+
+    if (!selectedProductsList) return;
+
+    if (!enquiryBucket.length) {
+
+        selectedProductsList.innerHTML = `
+            <p class="text-center text-gray-500 py-6">
+                No products selected yet.
+            </p>
+        `;
+
+        return;
+
+    }
+
+    selectedProductsList.innerHTML = enquiryBucket.map(product => `
+
+<div class="flex items-start gap-4 py-4 border-b border-gray-100 last:border-0">
+
+    <img
+        src="${product.image}"
+        alt="${product.name}"
+        class="w-16 h-16 rounded-xl object-cover border border-gray-200 flex-shrink-0">
+
+    <div class="flex-1 min-w-0">
+
+        <h4 class="font-semibold text-[15px] leading-5 text-[#18382a]">
+            ${product.name}
+        </h4>
+
+        <p class="text-sm text-gray-500 mt-1">
+            ${product.price}
+        </p>
+
+    </div>
+
+    <button
+        class="remove-product text-sm font-medium text-red-500 hover:text-red-700 transition"
+        data-id="${product.id}">
+
+        Remove
+
+    </button>
+
+</div>
+
+`).join("");
+
+    document.querySelectorAll(".remove-product").forEach(button => {
+
+        button.onclick = function () {
+
+            const id = Number(this.dataset.id);
+
+            enquiryBucket =
+                enquiryBucket.filter(item => item.id !== id);
+
+            updateEnquiryUI();
+
+            renderProducts(false);
+
+        };
+
+    });
+
+}
+
+/* ==========================================================
+   Product Modal → Add To Enquiry
+========================================================== */
+
+const productWhatsapp =
+    document.getElementById("productWhatsapp");
+
+if (productWhatsapp) {
+
+    productWhatsapp.onclick = function () {
+
+        if (!window.currentProduct) return;
+
+        const existing =
+            enquiryBucket.findIndex(item =>
+                item.id === window.currentProduct.id
+            );
+
+        if (existing >= 0) {
+
+            enquiryBucket.splice(existing, 1);
+
+        } else {
+
+            enquiryBucket.push(window.currentProduct);
+
+        }
+
+        updateEnquiryUI();
+
+        productModal.style.display = "none";
+
+    };
+
+}
+
+/* ==========================================================
+   Enquiry Modal
+========================================================== */
+
+if (enquiryBtn && enquiryModal) {
+
+    enquiryBtn.addEventListener("click", () => {
+
+        updateEnquiryUI();
+
+        enquiryModal.style.display = "flex";
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+}
+
+if (closeEnquiry && enquiryModal) {
+
+    closeEnquiry.addEventListener("click", () => {
+
+        enquiryModal.style.display = "none";
+
+        document.body.style.overflow = "";
+
+    });
+
+}
+
+if (closeEnquiryTop && enquiryModal) {
+
+    closeEnquiryTop.addEventListener("click", () => {
+
+        enquiryModal.style.display = "none";
+
+        document.body.style.overflow = "";
+
+    });
+
+}
+
+window.addEventListener("click", (e) => {
+
+    if (e.target === enquiryModal) {
+
+        enquiryModal.style.display = "none";
+
+        document.body.style.overflow = "";
+
+    }
+
+});
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape" && enquiryModal.style.display === "flex") {
+
+        enquiryModal.style.display = "none";
+
+        document.body.style.overflow = "";
+
+    }
+
+});
+
+/* ==========================================================
+   WhatsApp Enquiry
+========================================================== */
+
+if (sendWhatsapp) {
+
+    sendWhatsapp.onclick = function () {
+
+        if (!enquiryBucket.length) {
+
+            alert("Please add at least one product.");
+
+            return;
+
+        }
+
+        if (
+            customerName.value.trim() === "" ||
+            customerMobile.value.trim() === "" ||
+            customerCity.value.trim() === ""
+        ) {
+
+            alert("Please fill all details.");
+
+            return;
+
+        }
+
+        let message =
+`Hi MotoTrek,
+
+I would like to enquire about the following products:
+
+`;
+
+        enquiryBucket.forEach((product, index) => {
+
+            message +=
+`${index + 1}. ${product.name}
+Price: ${product.price}
+
+`;
+
+        });
+
+        message +=
+`--------------------------------
+
+Customer Details
+
+Name: ${customerName.value}
+
+Phone: ${customerMobile.value}
+
+Location: ${customerCity.value}
+
+Please let me know the availability and pricing.
+
+Thank you.`;
+
+        window.open(
+            "https://wa.me/919511901753?text=" +
+            encodeURIComponent(message),
+            "_blank"
+        );
+
+    };
 
 }
 
